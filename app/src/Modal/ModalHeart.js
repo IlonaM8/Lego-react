@@ -42,14 +42,15 @@ export default function ModalHeart() {
 
   return (
     <>
-    <Tooltip onClick={ (e) => setOpen(true)}
-      sx={{
-        position: "fixed", 
-        top: 90,
-        right: 90
-        }}>
+    <Tooltip onClick={ (e) => setOpen(true)}>
     
-      <FavoriteBorderRoundedIcon  />
+      <FavoriteBorderRoundedIcon 
+         sx={{ display: { xs: "none", sm: "none", md: "block"}, 
+         cursor: "pointer", 
+         width: 40, 
+         position: "fixed", 
+         top: 90,
+         right: 180}} />
     
      </Tooltip>
         <StyledModal 
