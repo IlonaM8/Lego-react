@@ -1,4 +1,11 @@
 import Button from "./ButtonsExample/component"
+import AnotherModal from "./Modal/AnotherModal"
+import ModalAccount from "./Modal/ModalAccount"
+import ModalHeart from "./Modal/ModalHeart"
+
+
+import Navabar from "./Navbar/Navabar"
+import WhiteBar from "./White-bar/WhiteBar"
 
 
 
@@ -16,17 +23,26 @@ const App = () => {
 
     return(
         <div>
-            <h1>Ciao Mondo</h1>
+             <WhiteBar />
+            <Navabar />
+            <h1>Lego website work in progress</h1>
             < Button 
                 btnStyle="button-noborder" 
                 text="Natale"  
-                onClick={clickButton} />
+                onClick={clickButton}
+             />
             <div>
             < Button
                 btnStyle="button-border" 
                 text="Compra ora"  
-                onClick={clickAltroButton} />
+                onClick={clickAltroButton} 
+            />
             </div>
+           
+        <ModalHeart />
+        <AnotherModal />
+        
+          
         </div>
         
     )
