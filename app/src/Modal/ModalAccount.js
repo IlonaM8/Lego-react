@@ -46,7 +46,7 @@ export default function ModalAccount() {
 
         }}>
     
-      <ContactsIcon sx={{ display: { xs: "none", sm: "none", md: "block"}, cursor: "pointer"}}/>
+      <ContactsIcon sx={{ display: { xs: "none", sm: "none", md: "block"}, cursor: "pointer", width: 20}}/>
     
      </Tooltip>
         <StyledModal 
