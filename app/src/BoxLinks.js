@@ -19,7 +19,7 @@ function BoxLinks() {
 
       <ul className="footer-links">
         {link.link.map((link) => (
-          <li className="footer-single-link">
+          <li className="footer-single-link" key={link.toString()}>
             <a href={href} className="footer-single-href">{link}</a>
           </li>
         ))}

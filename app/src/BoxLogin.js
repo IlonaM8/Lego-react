@@ -1,6 +1,4 @@
 import React from "react";
-import { TextField } from "@mui/material";
-import { Button } from "@mui/material";
 import ArrowSvg from "./assets/Arrow.svg";
 import { Box } from "@mui/system";
 import "./footer.css";
@@ -11,10 +9,10 @@ function BoxLogin() {
       <span className="span-footer">Iscriviti alle email di marketing</span>
 
       <Box sx={{ width: "15.625rem", display: "flex" }}>
-        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-        <Button variant="contained">
-          <img src={ArrowSvg} alt="arrow" />
-        </Button>
+        <input className="input-footer" placeholder="il tuo indirizzo e-mail"/>
+        <button className="button-footer">
+          <img src={ArrowSvg} alt="arrow" className="arrow-footer" />
+        </button>
       </Box>
     </Box>
   );
