@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "CeraPro-bold";
+  src: url("fontspring-demo-cerapro-bold.woff");
+}
+
+@font-face {
+  font-family: "CeraPro-medium";
+  src: url("fontspring-demo-cerapro-medium.woff");
+}
+
+@font-face {
+  font-family: "CeraPro-regular";
+  src: url("fontspring-demo-cerapro-regular.woff");
+}
+
+.container-footer {
+  background-color: #201d48;
+  height: auto;
+  color: white;
+
+}
+
+.logo-footer {
+  height: 97px;
+  width: 97px;
+}
+
+.footer-button {
+  padding: 0.625rem;
+  background-color: rgb(24, 21, 45);
+  border: none;
+  display: flex;
+  align-items: flex-start;
+
+  color: white;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+  margin-bottom: 1.5625rem;
+}
+
+.position-svg {
+  margin: 0px 0.625rem 0px 0px;
+  height: 19px;
+  width: 25px;
+}
+
+.first-div-flex {
+  font-weight: 400;
+  padding: 0.625rem 0px;
+  font-family: "CeraPro-regular";
+}
+
+.footer-link-title {
+  font-family: "CeraPro-bold";
+  margin: 0px 0px 1.5625rem;
+  padding: 0px 0.9375rem;
+}
+
+.footer-links {
+  font-family: "CeraPro-regular";
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.footer-single-link {
+  padding: 0.625rem 0.9375rem;
+  line-height: 1.5625rem;
+  font-size: 1rem;
+}
+
+.footer-single-href {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-single-href:hover {
+  text-decoration: underline;
+}
+
+.span-footer {
+  font-family: "CeraPro-medium";
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.social-footer {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0px 1.25rem 0px 0px;
+}
+
+.rights-li {
+  font-size: 0.75rem;
+  font-family: "CeraPro-regular";
+  display: inline-block;
+  margin-right: 1.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.rights-p{
+  font-size: 0.75rem;
+  line-height: 1.1875rem;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1.25rem;
+  margin-top: 0px;
+  font-family: "CeraPro-regular";
+}
