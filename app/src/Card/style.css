@@ -1,0 +1,52 @@
+*{
+    font-family: "CeraPro-regular";
+}
+
+.textIcon{
+    font-size: 13px;;
+}
+
+.borderContent{
+  padding: 15px;
+  height: 57%;
+  border: 1px solid rgb(224, 224, 224);
+}
+
+.textCard{
+    font-size: 14px;;
+}
+
+.effectImg:hover{
+    transform: scale(1.08);
+    transition: 0.8s;
+}
+
+.effectImg{
+    cursor: pointer;
+    height: fit-content;
+}
+
+/* font */
+@font-face {
+    font-family: "CeraPro-bold";
+    src: url("fontspring-demo-cerapro-bold.woff");
+}
+
+@font-face {
+    font-family: "CeraPro-medium";
+    src: url("fontspring-demo-cerapro-medium.woff");
+}
+
+@font-face {
+    font-family: "CeraPro-regular";
+    src: url("fontspring-demo-cerapro-regular.woff");
+}
+
+@media (min-width: 500px) {
+
+}
+@media (min-width: 700px) {
+}
+
+@media (min-width: 1100px) {
+}
