@@ -60,9 +60,6 @@ export default function WhiteBar() {
 
 
          <Box  sx={{
-                  // position: "fixed",
-                  // top: 30,
-                  // right: 180,
                   display: "flex",
                   alignItems: "center",
                   gap: 2
@@ -89,10 +86,7 @@ export default function WhiteBar() {
             sx={{
                 display: "flex",
                  alignItems: "center",
-                 gap: 4
-                // position: "fixed",
-                // top: 30,
-                // right: 110,
+                 gap: 2
             }}>
 
 
