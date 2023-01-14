@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 import MobileStepper from '@mui/material/MobileStepper';
 import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
@@ -15,7 +15,7 @@ const steps = [
     description: `Novità! Add On Pack VIP - Fun and Funky* `,
   },
   {
-    
+
     description:
       'Consegna GRATUITA sugli ordini superiori a 55 €!* ',
   },
@@ -38,6 +38,9 @@ export default function TextMobileStepper() {
   };
 
   return (
+    <Box sx = {{
+      display: { xs: "none", sm: "none", md: "flex"}
+       }}>
     <Box sx={{ maxWidth: "100%", display: "flex", flexDirection: "row"}}>
       <Paper
         square
@@ -47,7 +50,7 @@ export default function TextMobileStepper() {
           alignItems: 'center',
           bgcolor: 'background.default',
         }}
-      >  
+      >
       </Paper>
 
       <MobileStepper
@@ -61,8 +64,8 @@ export default function TextMobileStepper() {
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
           >
-            
-            
+
+
             {theme.direction === 'rtl' ? (
               <KeyboardArrowRight />
             ) : (
@@ -72,11 +75,11 @@ export default function TextMobileStepper() {
         }
       />
       <Box sx={{ height: 20, maxWidth: "100%", width: '100%', p: 2, fontSize: 12 }}>
-      
+
         {steps[activeStep].description}
         <Link sx={{textDecoration: 'none', paddingLeft: 1, cursor: 'pointer'}}>Scopri di più</Link>
       </Box>
-     
+
 
 
 
@@ -92,10 +95,11 @@ export default function TextMobileStepper() {
             ) : (
               <KeyboardArrowRight />
             )}
-            
+
           </Button>
         }
       />
+    </Box>
     </Box>
   );
 }

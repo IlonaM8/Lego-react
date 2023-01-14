@@ -34,7 +34,7 @@ export default function ModalHeart() {
     const handleMouseEnter = () => {
         setIsHovering(true);
       };
-    
+
       const handleMouseLeave = () => {
         setIsHovering(false);
       };
@@ -43,51 +43,51 @@ export default function ModalHeart() {
   return (
     <>
     <Tooltip onClick={ (e) => setOpen(true)}>
-    
-      <FavoriteBorderRoundedIcon 
-         sx={{ display: { xs: "none", sm: "none", md: "block"}, 
-         cursor: "pointer", 
-         width: 40, 
-         position: "fixed", 
-         top: 90,
-         right: 180}} />
-    
+
+      <FavoriteBorderRoundedIcon
+         sx={{ display: { xs: "none", sm: "none", md: "block"},
+         cursor: "pointer",
+         width: 40,
+         position: "fixed",
+         top: 27,
+         right: 60}} />
+
      </Tooltip>
-        <StyledModal 
+        <StyledModal
         open={open}
         onClose={ (e) => setOpen(false)}
-        
+
         >
-        <Box 
-         width={500} 
-         height={300} 
+        <Box
+         width={500}
+         height={300}
         //  bgcolor="black"
-        bgcolor={"background.default"} 
+        bgcolor={"background.default"}
         color={"text.primary"}
           padding={2} borderRadius={0}>
             <Box style={{display: "flex", justifyContent: "space-between"}}>
             <Typography variant='h6' color="black" textAlign="left" fontWeight={400} paddingBottom={2}>Il mio account</Typography>
             <CloseIcon style={{cursor: "pointer"}} onClick={(e) => setOpen(false)}/>
             </Box>
-           
+
             <UserBox>
-            <Avatar 
-                sx={{width:70, height:70}} 
+            <Avatar
+                sx={{width:70, height:70}}
                 variant="square"
                 src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/500px-LEGO_logo.svg.png'
             />
              <Typography variant='span' fontWeight={400}>Accedi al tuo account LEGO®</Typography>
             </UserBox >
-            
-           
-           <ButtonGroup 
+
+
+           <ButtonGroup
             color="secondary"
             fullWidth
-             variant="contained" 
+             variant="contained"
              aria-label="outlined primary button group">
-            
-            <Button 
-               color='primary' 
+
+            <Button
+               color='primary'
                onMouseEnter={handleMouseEnter}
                onMouseLeave={handleMouseLeave}
                variant="contained" sx={{height:"60px", cursor: "pointer"}}
