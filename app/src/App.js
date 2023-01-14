@@ -1,34 +1,30 @@
-import Button from "./ButtonsExample/component"
+
+import {Route, Routes } from "react-router-dom";
+import Decorator from "./Decorator";
+import Header from "./Header";
+import Home from "./Home";
+import Venduti from "./Venduti";
+
+
+
+
 
 
 
 const App = () => {
 
-    //function 
-    function clickButton(e){
-        console.log('Hai premuto il bottone ' + e.target.innerHTML)
-    }
-
-     //function 
-     function clickAltroButton(e){
-        console.log('Hai premuto un altro bottone ' + e.target.innerHTML)
-    }
 
     return(
         <div>
-            <h1>Ciao Mondo</h1>
-            < Button 
-                btnStyle="button-noborder" 
-                text="Natale"  
-                onClick={clickButton} />
-            <div>
-            < Button
-                btnStyle="button-border" 
-                text="Compra ora"  
-                onClick={clickAltroButton} />
-            </div>
-        </div>
-        
+            <Header/>
+        <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/Venduti" element={<Venduti />}/>
+            <Route  path="/Decorator" element={<Decorator/>}/>
+        </Routes>
+
+    </div>
+
     )
 }
 
