@@ -45,8 +45,9 @@ export default function TextMobileStepper() {
 
   return (
     <Box sx = {{
-      display: { xs: "flex", sm: "flex", md: "flex"}
-       }}>
+      display: { xs: "flex", sm: "flex", md: "flex"}, alignItems: "center"
+       }}
+      >
     <Box sx={{ maxWidth: "100%", display: "flex", flexDirection: "row"}}>
       <Paper
         square

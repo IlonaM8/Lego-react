@@ -29,7 +29,7 @@ export default function WhiteBar() {
     <Container maxWidth="xl">
 
 
-    <Box sx={{display: "flex", justifyContent: "space-between", alignItems: "center",  paddingTop: 0, paddingLeft: 3, paddingBottom: 1, paddingRight: 4}}>
+    <Box sx={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
 
          <Box sx={{display: { xs: "none", sm: "none", md: "block"}}}>
          <Button
@@ -39,23 +39,29 @@ export default function WhiteBar() {
             backgroundColor: isHovering ? 'white' : '',
             color: isHovering ? 'black' : '',
           }}
-           variant='contained'sx={{ height: 26, width: 131, display: "flex", alignItems: "center", gap: 1, bgcolor: "#b3e5fc", ":hover": "#e1f5fe", position: "fixed",
-           top: 10,
-           left: 80
+           variant='contained'
+           sx={{ height: 26,
+            width: 131,
+            display: "flex",
+            alignItems: "center",
+            gap: 1,
+             bgcolor: "#b3e5fc", ":hover": "#e1f5fe"
            }}>
             <KeyboardBackspaceIcon  sx={{color: "black", height: 16}}/>
             <Typography sx={{fontSize: 10, color: "black"}}>Area Giochi</Typography>
          </Button>
          </Box>
 
-        <SlideShow/>
+
+        <SlideShow />
 
         <Box sx={{
                   display: "flex",
                   justifyContent: "end",
                   alignItems: "center",
                   gap: 2
-                  }}>
+                  }}
+        >
 
 
 
@@ -63,7 +69,8 @@ export default function WhiteBar() {
                   display: "flex",
                   alignItems: "center",
                   gap: 2
-                  }}>
+                  }}
+          >
          <ModalAccount />
          <Typography sx={{ display: {xs: "none", sm: "none", md: "none", lg: "block"}, fontSize: 13, color: "black", paddingLeft: 1}}>Account</Typography>
          <Box sx={{
@@ -74,7 +81,8 @@ export default function WhiteBar() {
                   width: 0,
                   border:  1,
                   color: 'black'
-                }}>
+                }}
+          >
            <Divider orientation="vertical" flexItem>
            </Divider>
           </Box>
@@ -87,7 +95,8 @@ export default function WhiteBar() {
                 display: "flex",
                  alignItems: "center",
                  gap: 2
-            }}>
+            }}
+          >
 
 
         <Avatar sx={{ display: { xs: "none", sm: "none", md: "block"}, width: 20, height: 20}} alt="lego-logo" src="https://www.lego.com/_next/static/images/vip-73aacc5347bc84c586d662f654c3a629.png" variant="square" />
