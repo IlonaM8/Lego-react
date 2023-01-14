@@ -48,9 +48,7 @@ export default function ModalHeart() {
          sx={{ display: { xs: "none", sm: "none", md: "block"},
          cursor: "pointer",
          width: 40,
-         position: "fixed",
-         top: 27,
-         right: 60}} />
+         }} />
 
      </Tooltip>
         <StyledModal
@@ -60,7 +58,8 @@ export default function ModalHeart() {
         >
         <Box
          width={500}
-         height={300}
+         height={360}
+         border="none"
         //  bgcolor="black"
         bgcolor={"background.default"}
         color={"text.primary"}

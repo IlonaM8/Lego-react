@@ -1,6 +1,10 @@
 
+import {Route, Routes } from "react-router-dom";
+import Decorator from "./Decorator";
+import Header from "./Header";
+import Home from "./Home";
+import Venduti from "./Venduti";
 
-import WhiteBar from "./White-bar/WhiteBar"
 
 
 
@@ -9,52 +13,17 @@ import WhiteBar from "./White-bar/WhiteBar"
 
 const App = () => {
 
-    //function
-    // function clickButton(e){
-    //     console.log('Hai premuto il bottone ' + e.target.innerHTML)
-    // }
-
-     //function
-    //  function clickAltroButton(e){
-    //     console.log('Hai premuto un altro bottone ' + e.target.innerHTML)
-    // }
 
     return(
         <div>
-            <WhiteBar />
-            {/* <Navabar /> */}
-            {/* < Button
-                btnStyle="button-noborder"
-                text="Natale"
-                onClick={clickButton}
-             /> */}
-            <div>
-            {/* < Button
-                btnStyle="button-border"
-                text="Compra ora"
-                onClick={clickAltroButton}
-            /> */}
-            </div>
+            <Header/>
+        <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/Venduti" element={<Venduti />}/>
+            <Route  path="/Decorator" element={<Decorator/>}/>
+        </Routes>
 
-
-        {/* <NavbarLego /> */}
-
-        {/* <Routes>
-            <Route path="/" element={<Homepage/>}/>
-            <Route  path="/Card" element={<CardExample/>}/>
-            <Route path="/Carousel" element={<CarouselExample />}/>
-            <Route  path="/Table" element={<Table />}/>
-            <Route path="/Chips"  element={<ChipsExample />}/>
-        </Routes> */}
-
-
-
-          {/* <AppBarLego /> */}
-          {/* <MobileDrawer /> */}
-
-
-
-        </div>
+    </div>
 
     )
 }

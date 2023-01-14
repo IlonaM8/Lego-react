@@ -10,6 +10,7 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import { Link } from '@mui/material';
 
 
+
 const steps = [
   {
     description: `Novità! Add On Pack VIP - Fun and Funky* `,
@@ -25,6 +26,8 @@ const steps = [
 ];
 
 export default function TextMobileStepper() {
+
+
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = steps.length;
@@ -37,9 +40,12 @@ export default function TextMobileStepper() {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
+
+
+
   return (
     <Box sx = {{
-      display: { xs: "none", sm: "none", md: "flex"}
+      display: { xs: "flex", sm: "flex", md: "flex"}
        }}>
     <Box sx={{ maxWidth: "100%", display: "flex", flexDirection: "row"}}>
       <Paper
@@ -78,6 +84,7 @@ export default function TextMobileStepper() {
 
         {steps[activeStep].description}
         <Link sx={{textDecoration: 'none', paddingLeft: 1, cursor: 'pointer'}}>Scopri di più</Link>
+
       </Box>
 
 
