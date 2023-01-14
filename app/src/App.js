@@ -1,6 +1,7 @@
 import Button from "./ButtonsExample/component"
 import BigCard from "./Card/DataCard2"
 import BaseCard from "./MiniCard/DataCard"
+import { second } from "./Card/DataCard2"
 
 const App = () => {
 
@@ -19,7 +20,7 @@ const App = () => {
             {/* <BoxCard /> */}
            <BaseCard />
            <br></br>
-           <BigCard />
+           <BigCard array={second}/>
             {/* <h1>Ciao Mondo</h1>
             < Button
                 btnStyle="button-noborder"

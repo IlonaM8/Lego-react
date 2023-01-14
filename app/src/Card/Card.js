@@ -16,7 +16,7 @@ const AnotherCard = (props) => {
     // <Card sx={{ maxWidth: 345 }}>
     <Card>
       <div className='borderContent'>
-        <IconButton aria-label="add to favorites">
+        <IconButton aria-label="add to favorites" color="primary">
           <FavoriteBorderOutlinedIcon />
         </IconButton><span className='textIcon'><b>Aggiungi alla lista dei desideri</b></span>
         <div className='applyEffect'>
