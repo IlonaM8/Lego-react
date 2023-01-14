@@ -5,12 +5,6 @@ import Header from "./Header";
 import Home from "./Home";
 import Venduti from "./Venduti";
 
-
-
-
-
-
-
 const App = () => {
 
 
