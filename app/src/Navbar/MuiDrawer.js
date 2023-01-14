@@ -1,7 +1,8 @@
-import { Button, ButtonGroup, Divider, Drawer, List, ListItem, ListItemButton, ListItemText} from '@mui/material'
+import { Button, ButtonGroup, Divider, Drawer, List, ListItem, ListItemButton, ListItemText, Typography} from '@mui/material'
 import { IconButton } from '@mui/material';
+import { Box } from '@mui/system';
 import { useState } from 'react'
-import MenuIcon from '@mui/icons-material/Menu';
+
 
 
 
@@ -27,9 +28,29 @@ export default function MuiDrawer() {
           color='inherit'
           aria-label='logo'
           onClick={() => setIsDrawerOpen(true)}>
-             <MenuIcon />
+             <Typography>Acquista</Typography>
     </IconButton>
-    <Drawer anchor='left' open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}
+    <IconButton
+          size='large'
+          edge='start'
+          color='inherit'
+          aria-label='logo'
+          onClick={() => setIsDrawerOpen(true)}>
+             <Typography>Scopri</Typography>
+    </IconButton>
+    <IconButton
+          size='large'
+          edge='start'
+          color='inherit'
+          aria-label='logo'
+          onClick={() => setIsDrawerOpen(true)}>
+             <Typography>Aiuto</Typography>
+    </IconButton>
+    <Drawer PaperProps={{
+              sx: {
+                width: 750
+              }}}
+      anchor='left' open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}
     >
       <ButtonGroup
             fullWidth
@@ -77,11 +98,11 @@ export default function MuiDrawer() {
 
 
 
-        {/* <Box p={2} width='250px' textAlign='center' role='presentation'>
+        <Box p={2} width='250px' textAlign='center' role='presentation'>
             <Typography variant='h6' component='div'>
                 Hello side panel
             </Typography>
-        </Box> */}
+        </Box>
 
     </Drawer>
     </>
