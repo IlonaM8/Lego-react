@@ -10,15 +10,15 @@ import { Button } from '@mui/material';
 import {Rating} from '@mui/material';
 
 const AnotherCard = (props) => {
-// export default function BigCard() {
-
   return (
-    // <Card sx={{ maxWidth: 345 }}>
+
     <Card>
       <div className='borderContent'>
+
         <IconButton aria-label="add to favorites" color="primary">
           <FavoriteBorderOutlinedIcon />
         </IconButton><span className='textIcon'><b>Aggiungi alla lista dei desideri</b></span>
+
         <div className='applyEffect'>
         <CardMedia className='effectImg'
         component="img"
@@ -28,11 +28,6 @@ const AnotherCard = (props) => {
       </div>
 
       <CardContent>
-        {/* <Typography
-        variant="h6"
-        gutterBottom
-        color="text.primary">
-        </Typography> */}
         <p className='textCard'><b>{props.nameItem}</b></p>
         <Rating readOnly defaultValue={3.0}/>
         <Typography
@@ -46,13 +41,11 @@ const AnotherCard = (props) => {
         {/* <span style={{textDecoration:'line-through', color:'black'}}>{props.price}</span> 174,99€ */}
         </Typography>
       </CardContent>
+
       <CardActions
       style={{justifyContent: 'center'}}
       >
         <Button
-        // variant="text"
-        // size="small"
-        // color="primary"
         sx={{
           width:'100%',
           backgroundColor: 'orange',
@@ -61,6 +54,7 @@ const AnotherCard = (props) => {
           Aggiungi al carrello
         </Button>
       </CardActions>
+
     </Card>
   );
 }
