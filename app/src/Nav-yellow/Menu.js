@@ -5,9 +5,7 @@ import MuiDrawer from '../Navbar/MuiDrawer'
 import List from './List'
 import styles from './Menu.module.css'
 import menuAcquista from './MenuDrawer'
-import menuAiuto from './MenuDrawer'
-import menuScopri from './MenuDrawer'
-import TabsVertical from './TabsVertical'
+
 
 const Menu = () => {
   const [open, setOpen] = React.useState(false);
@@ -35,11 +33,11 @@ const Menu = () => {
          <List onClick={handleOpen} className={styles.color} items={items} />
 
          <Drawer anchor={"left"}>
-             <List items={menuAcquista} />
+             <List  items={menuAcquista} />
         </Drawer>
         <MobileDrawer />
         <MuiDrawer />
-        
+
     </Box>
   )
 }
