@@ -1,7 +1,7 @@
 import { AppBar, Avatar, Box, IconButton, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 import ModalHeart from '../Modal/ModalHeart'
-import MuiDrawer from '../Navbar/MuiDrawer'
+// import MuiDrawer from '../Navbar/MuiDrawer'
 import InputSearch from './InputSearch'
 import Menu from './Menu'
 
@@ -30,7 +30,7 @@ export default function YellowNav() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            <MuiDrawer/>
+
             <Menu />
           </Typography>
           <Box sx={{display: "flex", gap: 2, alignItems: "center", paddingRight: 5}}>
