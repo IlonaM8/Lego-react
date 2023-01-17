@@ -1,5 +1,5 @@
-import { Box, Button, Drawer } from '@mui/material'
-import React from 'react'
+import { Box, Button, ButtonGroup, Divider, Drawer, IconButton, ListItem, ListItemButton, ListItemText, Typography } from '@mui/material'
+import React, { useState } from 'react'
 import MobileDrawer from '../Navbar/MobileDrawer'
 import MuiDrawer from '../Navbar/MuiDrawer'
 import List from './List'
@@ -8,35 +8,70 @@ import menuAcquista from './MenuDrawer'
 
 
 const Menu = () => {
-  const [open, setOpen] = React.useState(false);
-
-    function handleOpen() {
-        setOpen(!open);
-    }
-
-    function handleClose() {
-        setOpen(false);
-    }
-
-  const items = [
-    { id: 1, name: 'Acquista' },
-    { id: 2, name: 'Scopri' },
-    { id: 3, name: 'Aiuto' }
-  ]
-
 
 
 
   return (
     <Box>
+      <IconButton
+          size='large'
+          edge='start'
+          color='inherit'
+          aria-label='logo'
+          >
+             <Typography>Acquista</Typography>
+    </IconButton>
+    <IconButton
+          size='large'
+          edge='start'
+          color='inherit'
+          aria-label='logo'
+          >
+             <Typography>Scopri</Typography>
+    </IconButton>
+    <IconButton
+          size='large'
+          edge='start'
+          color='inherit'
+          aria-label='logo'
+         >
+             <Typography>Aiuto</Typography>
+    </IconButton>
 
-         <List onClick={handleOpen} className={styles.color} items={items} />
+         {/* <List onClick={handleOpen} className={styles.color} items={items} /> */}
 
-         <Drawer anchor={"left"}>
-             <List  items={menuAcquista} />
-        </Drawer>
-        <MobileDrawer />
-        <MuiDrawer />
+         <Drawer PaperProps={{
+              sx: {
+                width: 750
+              }}}
+             anchor='left'
+    >
+
+
+        <List>
+            {['Home', 'Acquista', 'Scopri', 'Aiuto'].map((text, index) =>(
+              <>
+                <ListItem key={text} >
+                    <ListItemButton>
+                        <ListItemText primary={text}/>
+                    </ListItemButton>
+                </ListItem>
+                <Divider/>
+            </>
+            ))}
+        </List>
+
+
+
+        <Box p={2} width='250px' textAlign='center' role='presentation'>
+            <Typography variant='h6' component='div'>
+                Hello side panel
+            </Typography>
+        </Box>
+
+    </Drawer>
+
+
 
     </Box>
   )

@@ -1,7 +1,8 @@
-import { Button, ButtonGroup, Divider, Drawer, List, ListItem, ListItemButton, ListItemText, Typography} from '@mui/material'
+import { AppBar, Button, ButtonGroup, Divider, Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography} from '@mui/material'
 import { IconButton } from '@mui/material';
 import { Box } from '@mui/system';
 import { useState } from 'react'
+import MenuIcon from '@mui/icons-material/Menu';
 
 
 
@@ -9,6 +10,7 @@ import { useState } from 'react'
 export default function MuiDrawer() {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false)
     const [isHovering, setIsHovering] = useState(false);
+    const [open, setOpen] = useState(false);
 
 
     const handleMouseEnter = () => {
@@ -19,33 +21,35 @@ export default function MuiDrawer() {
         setIsHovering(false);
       };
 
+      const handleDrawerOpen = () => {
+        setOpen(true);
+      };
+
+      const handleDrawerClose = () => {
+        setOpen(false);
+      };
+
 
   return (
     <>
-    <IconButton
-          size='large'
-          edge='start'
-          color='inherit'
-          aria-label='logo'
-          onClick={() => setIsDrawerOpen(true)}>
-             <Typography>Acquista</Typography>
-    </IconButton>
-    <IconButton
-          size='large'
-          edge='start'
-          color='inherit'
-          aria-label='logo'
-          onClick={() => setIsDrawerOpen(true)}>
-             <Typography>Scopri</Typography>
-    </IconButton>
-    <IconButton
-          size='large'
-          edge='start'
-          color='inherit'
-          aria-label='logo'
-          onClick={() => setIsDrawerOpen(true)}>
-             <Typography>Aiuto</Typography>
-    </IconButton>
+      <AppBar position="fixed" open={open}>
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            sx={{ mr: 2, ...(open && { display: 'none' }) }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" noWrap component="div">
+            Persistent drawer
+          </Typography>
+        </Toolbar>
+      </AppBar>
+
+
     <Drawer PaperProps={{
               sx: {
                 width: 750
