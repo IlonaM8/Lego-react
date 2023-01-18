@@ -25,9 +25,9 @@ export default function MuiDrawer() {
         setOpen(true);
       };
 
-      const handleDrawerClose = () => {
-        setOpen(false);
-      };
+      // const handleDrawerClose = () => {
+      //   setOpen(false);
+      // };
 
 
   return (

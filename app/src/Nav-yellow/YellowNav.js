@@ -1,39 +1,25 @@
-import { AppBar, Avatar, Box, IconButton, Toolbar, Typography } from '@mui/material'
+import { AppBar, Avatar, Box, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 import ModalHeart from '../Modal/ModalHeart'
-// import MuiDrawer from '../Navbar/MuiDrawer'
 import InputSearch from './InputSearch'
 import Menu from './Menu'
+
 
 export default function YellowNav() {
   return (
     <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "none", md: "block"}}}>
       <AppBar position="static">
         <Toolbar sx={{backgroundColor: "#FFCF00", color: "black" }}>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="homepage"
-            sx={{ mr: 2 }}
-          >
-            <Avatar
+          <Avatar
                 sx={{width:50, height:50}}
                 variant="square"
                 src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/500px-LEGO_logo.svg.png'
             />
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
-          </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-
-            <Menu />
-          </Typography>
-          <Box sx={{display: "flex", gap: 2, alignItems: "center", paddingRight: 5}}>
+                <Menu />
+          </Box>
+          <Box sx={{flexGrow: 0, display: "flex", gap: 2, alignItems: "center", paddingRight: 5}}>
             <InputSearch />
             <ModalHeart />
             <Box sx={{display: "flex", gap: 0.5}}>

@@ -1,31 +1,16 @@
-.menu {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    align-items: center;
+
+.btn{
     cursor: pointer;
-    font-weight: 500;
-}
-
-.item{
-    padding-left: 50px;
-    padding-top: 10px;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    text-transform: uppercase;
+     text-transform: uppercase;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
+    color: black;
 }
 
-.item:hover{
-    text-decoration: underline;
-}
-
-.color{
-    color: blue;
+.btn:hover{
+     color: black;
+     text-decoration: underline;
 }
 
 
-.menuItems{
-    color: rgb(249, 95, 121);
-}
+
