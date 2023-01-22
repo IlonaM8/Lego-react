@@ -66,12 +66,14 @@ export default function WhiteBar() {
 
 
          <Box  sx={{
-                  display: "flex",
+                  display: {xs: "none", sm: "none", md: "flex", lg: "flex"},
                   alignItems: "center",
-                  gap: 2
+                  gap: 2,
+                  cursor: "pointer"
                   }}
           >
          <ModalAccount />
+
          <Typography sx={{ display: {xs: "none", sm: "none", md: "none", lg: "block"}, fontSize: 13, color: "black", paddingLeft: 1}}>Account</Typography>
          <Box sx={{
                   display: {xs: "none", sm: "none", md: "flex", lg: "flex"},

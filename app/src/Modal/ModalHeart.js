@@ -45,7 +45,7 @@ export default function ModalHeart() {
     <Tooltip onClick={ (e) => setOpen(true)}>
 
       <FavoriteBorderRoundedIcon
-         sx={{ display: { xs: "none", sm: "none", md: "block"},
+         sx={{ 
          cursor: "pointer",
          width: 40,
          }} />
