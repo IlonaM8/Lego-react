@@ -8,6 +8,7 @@ import BoxSocial from "./BoxSocial";
 import BoxRights from "./BoxRights";
 
 import "./footer.css";
+import BoxAccordions from "./BoxAccordions";
 
 function Footer() {
   return (
@@ -45,6 +46,7 @@ function Footer() {
           }}
         >
           <BoxLogin />
+          <BoxAccordions />
           <BoxSocial />
         </Box>
 
