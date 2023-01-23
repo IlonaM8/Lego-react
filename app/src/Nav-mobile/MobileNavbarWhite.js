@@ -1,9 +1,11 @@
 import { Box } from '@mui/system'
 import React from 'react'
-import { AppBar, Avatar, Toolbar, Typography } from '@mui/material'
+import { AppBar, Avatar, Divider, Toolbar, Typography } from '@mui/material'
 import ModalHeart from '../Modal/ModalHeart'
 import InputSearch from '../Nav-yellow/InputSearch'
 import ModalAccount from '../Modal/ModalAccount'
+import MobileDrawer from '../Navbar/MobileDrawer'
+
 
 
 
@@ -11,18 +13,17 @@ export default function MobileNavbarWhite() {
   return (
     <Box>
         <Box sx={{ flexGrow: 1, display: { xs: "block", sm: "block", md: "none"}}}>
-      <AppBar position="static">
-        <Toolbar sx={{backgroundColor: "pink", color: "black"}}>
+        <AppBar position="static">
+        <Toolbar sx={{backgroundColor: "#fafafa", color: "black", display: "flex", alignItems: "center", justifyContent: "space-between"}}>
+       <Box sx={{display: "flex", alignItems: "center", gap: 2}}>
+       <MobileDrawer />
 
-          <Avatar
+         <Avatar
                 sx={{width:40, height:40}}
                 variant="square"
                 src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/500px-LEGO_logo.svg.png'
             />
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' } }}>
-
-                {/* <Menu /> */}
-          </Box>
+       </Box>
           <Box sx={{flexGrow: 0, display: "flex", gap: 1, alignItems: "center", paddingRight: 0}}>
             <InputSearch />
 
@@ -30,7 +31,7 @@ export default function MobileNavbarWhite() {
             <Box  sx={{
                   display: {xs: "block", sm: "block", md: "none", lg: "none"},
                   alignItems: "center",
-                  gap: 2,
+                  gap: 1,
                   cursor: "pointer"
                   }}
           >
@@ -49,7 +50,10 @@ export default function MobileNavbarWhite() {
 
         </Toolbar>
       </AppBar>
+
     </Box>
+    <Divider sx={{bgcolor: "yellow", p: 0.04}} />
+
     </Box>
   )
 }
