@@ -1,8 +1,8 @@
 import React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
-import { styled, useTheme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
-import { Drawer as MuiDrawer, ListItem,  ListItemText, List, ListItemButton, Divider, Typography, Drawer, IconButton, ListItemIcon, Avatar, ButtonGroup, Button } from '@mui/material';
+import { Drawer, ListItem,  ListItemText, List, ListItemButton, Divider, Typography, IconButton, ListItemIcon, Avatar, ButtonGroup, Button } from '@mui/material';
 import { Box } from '@mui/system';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import CloseIcon from '@mui/icons-material/Close';
@@ -16,11 +16,13 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
-  justifyContent: 'space-between',
+  justifyContent: 'space-between'
 }));
 
+
+
 const  MobileDrawer = () => {
- 
+
   const [open, setOpen] = React.useState(false);
   const [isHovering, setIsHovering] = React.useState(false);
 
@@ -99,7 +101,7 @@ const  MobileDrawer = () => {
             <>
             <ListItem key={text} disablePadding>
               <ListItemButton>
-                 <ListItemText primary={text} />
+                 <ListItemText primary={text} primaryTypographyProps={{variant: "body2", style: {fontSize: 13, textTransform: "uppercase", fontWeight: 510, lineHeight: 2 }}}/>
                 <ListItemIcon>
                  {index === 1 || index === 2  ||index === 3 ?  <NavigateNextIcon /> : null }
                 </ListItemIcon>
@@ -122,7 +124,7 @@ const  MobileDrawer = () => {
                                       :         <Avatar sx={{ display: "flex", width: 20, height: 20}} alt="lego-logo" src="https://www.lego.com/_next/static/images/vip-73aacc5347bc84c586d662f654c3a629.png" variant="square" />
                                     }
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={text} primaryTypographyProps={{variant: "body2", style: {fontSize: 10, textTransform: "uppercase", fontWeight: 510, lineHeight: 2 }}} />
               </ListItemButton>
             </ListItem>
             <Divider />
@@ -134,7 +136,7 @@ const  MobileDrawer = () => {
             <>
             <ListItem key={text} disablePadding>
               <ListItemButton>
-                <ListItemText primary={text} />
+                <ListItemText primary={text} primaryTypographyProps={{variant: "body2", style: {fontSize: 11, fontWeight: 510, lineHeight: 2 }}} />
               </ListItemButton>
             </ListItem>
             <Divider />
@@ -149,7 +151,7 @@ const  MobileDrawer = () => {
                 <ListItemIcon>
                 {index === 0 ?  <LocationOnIcon /> : null }
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={text} primaryTypographyProps={{variant: "body2", style: {fontSize: 11,  fontWeight: 510, lineHeight: 2 }}} />
               </ListItemButton>
             </ListItem>
             <Divider />
