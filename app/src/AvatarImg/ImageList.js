@@ -1,12 +1,13 @@
 
 import { Link } from 'react-router-dom';
 import { Typography } from '@mui/material';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import { useBreakpoint } from './useBreakpoint';
 
 
 
 export const ImageList = () => {
-  const matches = useMediaQuery('(min-width:600px)');
+  const matches = useBreakpoint('(min-width:900px)');
+
 
   const imagesAndTitles = [
     {
@@ -58,14 +59,16 @@ export const ImageList = () => {
 
         // <Link  style={{display: "flex", flexDirection: "column", alignItems: "center", gap: 10, listStyle: "none", textDecoration: "none", color: "black"}}
         //         to={`/image/${index}`} key={image.url}>
-                  <useMediaQuery minWidth={915}>
+
+ <>
+                 <useMediaQuery minWidth={900}>
                     {matches ?
                     (
                       <>
                     <div style={{display: "flex", alignItems: "center", justifyContent: "center", gap: 30, paddingTop: 40, paddingBottom: 50}}>
                     {imagesAndTitles.map((image, index) => (
 
-                      <Link  style={{display: "flex", flexDirection: "column", alignItems: "center", gap: 10, listStyle: "none", textDecoration: "none", color: "green"}}
+                      <Link  style={{display: "flex", flexDirection: "column", alignItems: "center", gap: 10, listStyle: "none", textDecoration: "none", color: "black"}}
                               to={`/image/${index}`} key={image.url}>
                             <img src={image.url} alt={image.title} style={{width: 80, height: 60}} />
                             <Typography style={{fontSize: 12,  }}  variant="p">{image.title}</Typography>
@@ -79,16 +82,23 @@ export const ImageList = () => {
                     ( <>
                     <div style={{display: "flex", alignItems: "center", justifyContent: "center", gap: 30, paddingTop: 40, paddingBottom: 50, flexWrap: "wrap"}}>
                     {imagesAndTitles.map((image, index) => (
-                      <Link  style={{display: "flex", flexDirection: "column", alignItems: "center", gap: 10, listStyle: "none", textDecoration: "none", color: "red"}}
+                      <Link  style={{display: "flex", flexDirection: "column", alignItems: "center", gap: 10, listStyle: "none", textDecoration: "none", color: "black"}}
                               to={`/image/${index}`} key={image.url}>
-                        <img src={image.url} alt={image.title} style={{width: 40, height: 30}} />
-                        <Typography style={{fontSize: 10 }}  variant="p">{image.title}</Typography>
+                        <img src={image.url} alt={image.title} style={{width: 50, height: 40}} />
+                        <Typography style={{fontSize: 11 }}  variant="p">{image.title}</Typography>
                      </Link>
                      ))}
                     </div>
                       </>
                     )}
                   </useMediaQuery>
+
+
+
+            </>
+
+
+
         // </Link>
       // ))}
     // </div>
