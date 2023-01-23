@@ -5,6 +5,7 @@ import Header from "./Header";
 import Home from "./Home";
 import Venduti from "./Venduti";
 
+
 const App = () => {
 
 
@@ -16,6 +17,7 @@ const App = () => {
             <Route path="/Venduti" element={<Venduti />}/>
             <Route  path="/Decorator" element={<Decorator/>}/>
         </Routes>
+        
 
     </div>
 

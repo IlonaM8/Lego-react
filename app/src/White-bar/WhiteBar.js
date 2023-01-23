@@ -29,7 +29,7 @@ export default function WhiteBar() {
     <Container maxWidth="xl">
 
 
-    <Box sx={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+    <Box sx={{display: "flex", justifyContent: { xs: "center", sm: "center", md: "space-between"} , alignItems: "center"}}>
 
          <Box sx={{display: { xs: "none", sm: "none", md: "block"}}}>
          <Button
@@ -55,6 +55,7 @@ export default function WhiteBar() {
 
         <SlideShow />
 
+        <Box></Box>
         <Box sx={{
                   display: "flex",
                   justifyContent: "end",
@@ -62,16 +63,15 @@ export default function WhiteBar() {
                   gap: 2
                   }}
         >
-
-
-
          <Box  sx={{
-                  display: "flex",
+                  display: {xs: "none", sm: "none", md: "flex", lg: "flex"},
                   alignItems: "center",
-                  gap: 2
+                  gap: 2,
+                  cursor: "pointer"
                   }}
           >
          <ModalAccount />
+
          <Typography sx={{ display: {xs: "none", sm: "none", md: "none", lg: "block"}, fontSize: 13, color: "black", paddingLeft: 1}}>Account</Typography>
          <Box sx={{
                   display: {xs: "none", sm: "none", md: "flex", lg: "flex"},
@@ -87,9 +87,6 @@ export default function WhiteBar() {
            </Divider>
           </Box>
          </Box>
-
-
-
          <Box
             sx={{
                 display: "flex",
@@ -97,11 +94,11 @@ export default function WhiteBar() {
                  gap: 2
             }}
           >
-
-
         <Avatar sx={{ display: { xs: "none", sm: "none", md: "block"}, width: 20, height: 20}} alt="lego-logo" src="https://www.lego.com/_next/static/images/vip-73aacc5347bc84c586d662f654c3a629.png" variant="square" />
         <Typography sx={{ display: { xs: "none", sm: "none", md: "none", lg: "block"}, fontSize: 13, color: "black", paddingLeft: 1}}>VIP</Typography>
      </Box>
+
+
       </Box>
 
     </Box>
