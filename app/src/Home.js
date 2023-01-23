@@ -5,6 +5,9 @@ import { first,third } from './Card/DataCard2';
 import { second,fourth,fifth } from './MiniCard/DataCard';
 import BannerLight from './Banner/BannerLight';
 import BannerDark from './Banner/BannerDark';
+import ImageList from './AvatarImg/ImageList'
+
+
 
 export default function Home() {
   return (
@@ -14,6 +17,9 @@ export default function Home() {
                 title={"Costruisci un regalo. Fai un regalo."}
                 subtitle={"Per ogni regalo costruito e condiviso con l'hashtag #BuildToGive, doneremo un set LEGO® a un bambino bisognoso."}
                 bannerLogoLink={"https://www.lego.com/cdn/cs/set/assets/blt4b4cbcab65ae22fe/RTW-logo-white.png"}/>
+    <ImageList />
+
+
 
     <BigCard array={first}/>
     <BaseCard array={second}/>
