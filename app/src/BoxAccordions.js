@@ -14,7 +14,7 @@ const href = "#";
 function BoxAccordions() {
   const links = useLinks();
   const boxes = links.map((link) => (
-    <div className="footer-accordion">
+    <div>
       <Accordion style={{ backgroundColor: "#201d48", color: "white" }}>
         <AccordionSummary
           expandIcon={
@@ -42,7 +42,7 @@ function BoxAccordions() {
     </div>
   ));
 
-  return <>{boxes}</>;
+  return <div className="footer-accordion">{boxes}</div>;
 }
 
 export default BoxAccordions;

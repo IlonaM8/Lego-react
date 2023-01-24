@@ -36,19 +36,59 @@ function Footer() {
           </Box>
         </Box>
 
-        <Box
-          sx={{
-            display: "flex",
-            margin: "0px auto",
-            maxWidth: "82.5rem",
-            padding: "2.5rem 1.25rem 1.25rem 1.25rem",
-            justifyContent: "space-between",
-          }}
-        >
-          <BoxLogin />
-          <BoxAccordions />
-          <BoxSocial />
-        </Box>
+        <div className="box-login-e-social">
+          <Box
+            sx={{
+              display: "flex",
+              margin: "0px auto",
+              maxWidth: "82.5rem",
+              padding: "2.5rem 1.25rem 1.25rem 1.25rem",
+              justifyContent: "space-between",
+            }}
+          >
+            <BoxLogin />
+            <BoxSocial />
+          </Box>
+        </div>
+        {/* _________________ */}
+
+        <div className="mobile-box-footer">
+          <Box
+            sx={{
+              display: "flex",
+              margin: "0px auto",
+              maxWidth: "82.5rem",
+              padding: "2.5rem 1.25rem 1.25rem 1.25rem",
+              justifyContent: "space-between",
+            }}
+          >
+            <BoxLogin />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              margin: "0px auto",
+              maxWidth: "82.5rem",
+              padding: "2.5rem 1.25rem 1.25rem 1.25rem",
+              justifyContent: "space-between",
+            }}
+          >
+            <BoxAccordions />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              margin: "0px auto",
+              maxWidth: "82.5rem",
+              padding: "2.5rem 1.25rem 1.25rem 1.25rem",
+              justifyContent: "space-between",
+            }}
+          >
+            <BoxSocial />
+          </Box>
+        </div>
+
+        {/* ______________________ */}
 
         <Box
           sx={{

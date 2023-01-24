@@ -5,6 +5,7 @@ import "./footer.css";
 
 function BoxLogin() {
   return (
+    <div className="box-login">
     <Box sx={{ display: "flex", flexDirection: "column" }}>
       <span className="span-footer">Iscriviti alle email di marketing</span>
 
@@ -15,6 +16,7 @@ function BoxLogin() {
         </button>
       </Box>
     </Box>
+    </div>
   );
 }
 
