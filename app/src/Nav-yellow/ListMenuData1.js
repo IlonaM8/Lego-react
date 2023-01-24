@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import Box from '@mui/material/Box';
+// import Box from '@mui/material/Box';
 import ListForButton1 from './ListForButton1';
 import ListForButton2 from './ListForButton2';
 import ListForButton3 from './ListForButton3';
@@ -8,10 +8,14 @@ import ListForButton4 from './ListForButton4';
 import ListForButton5 from './ListForButton5';
 import ListForButton6 from './ListForButton6';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
+
+
 
 const data = [
   "Set per tema",
-  "Età",
+  "Età ",
   "Prezzi",
   "Merchandising LEGO",
   "Interessi",
@@ -37,9 +41,17 @@ export default function ListMenuData1() {
 
       const listItems = data.map((element, index) => {
         return (
-                <button
+          <Button style={{display: "flex",
+                          justifyContent: "start",
+                          backgroundColor: "white",
+                          textTransform: "none",
+                          fontSize:14,
+                          paddingTop: 2
+                          }}>
+              <Link to={element === "I più venduti" ? "/Venduti" : null}
+                    key={index}
                     onMouseEnter={() => {
-                      const newHoverStates = [...hoverStates];
+                    const newHoverStates = [...hoverStates];
                       newHoverStates[index] = true;
                       setHoverStates(newHoverStates);
                     }}
@@ -64,19 +76,22 @@ export default function ListMenuData1() {
 
 
                 style={{display: "flex",
+                        flexDirection: "row",
                         backgroundColor: "white",
                         border: 0,
                         fontSize:14,
                         paddingTop: 20,
-                         paddingLeft: 0,
+                        paddingLeft: 0,
                          listStyle: "none",
+                         color: "black",
                          cursor: "pointer",
                          textDecoration: hoverStates[index] ? "underline" : "none"}}>
                       <div style={{ display: "flex",  alignItems: "center"}}>
                         {element}
                       </div>
                       <div>{index < 6 && <ArrowForwardIosIcon style={{ position: "fixed", left: "20rem", height: 10, width: 20, marginLeft: 20}}/>}</div>
-              </button>
+              </Link>
+              </Button>
 
         )
       })

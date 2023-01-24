@@ -1,5 +1,8 @@
 
 import React, { useState } from 'react'
+import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
+
 
  const data = [
       "Verifica stato ordine",
@@ -15,7 +18,14 @@ export default function ListMenuData3() {
 
   const listItems = data.map((element, index) => {
     return (
-            <button
+            <Button style={{display: "flex",
+                            justifyContent: "start",
+                            backgroundColor: "white",
+                            textTransform: "none",
+                            fontSize:14,
+                            paddingTop: 2
+                         }}>
+                <Link
                 onMouseEnter={() => {
                   const newHoverStates = [...hoverStates];
                   newHoverStates[index] = true;
@@ -31,16 +41,19 @@ export default function ListMenuData3() {
             }}
 
             style={{display: "flex",
+                    flexDirection: "row",
                     backgroundColor: "white",
                     border: 0,
                     fontSize:14,
                     paddingTop: 20,
-                     paddingLeft: 0,
-                     listStyle: "none",
-                     cursor: "pointer",
+                    paddingLeft: 0,
+                    listStyle: "none",
+                    color: "black",
+                    cursor: "pointer",
                      textDecoration: hoverStates[index] ? "underline" : "none"}}>
                   {element}
-          </button>
+              </Link>
+          </Button>
 
     )
   })

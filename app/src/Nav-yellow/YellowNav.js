@@ -3,6 +3,7 @@ import React from 'react'
 import ModalHeart from '../Modal/ModalHeart'
 import InputSearch from './InputSearch'
 import Menu from './Menu'
+import { Link } from 'react-router-dom';
 
 
 export default function YellowNav() {
@@ -10,11 +11,13 @@ export default function YellowNav() {
     <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "none", md: "block"}}}>
       <AppBar position="static">
         <Toolbar sx={{backgroundColor: "#FFCF00", color: "black" }}>
+          <Link to="/">
           <Avatar
                 sx={{width:50, height:50}}
                 variant="square"
                 src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/500px-LEGO_logo.svg.png'
             />
+            </Link>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
                 <Menu />
@@ -27,7 +30,7 @@ export default function YellowNav() {
               <Typography sx={{ fontSize: 12}}>(0)</Typography>
           </Box>
           </Box>
- 
+
 
         </Toolbar>
       </AppBar>
