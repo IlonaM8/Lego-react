@@ -1,7 +1,13 @@
 import React from 'react'
+import { CheckboxProduct } from './checkbox/CheckboxProduct'
 
 export default function Venduti() {
   return (
-    <div>Venduti</div>
+    <div>
+       La pagina dei più Venduti
+
+      <CheckboxProduct />
+
+    </div>
   )
 }
