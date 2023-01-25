@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.christmasBanner {
+  display: flex;
+  margin: auto;
+  position: relative;
+}
+
+#mainBannerImg {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.bannerLogoLink {
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  width: auto;
+  height: 8vh;
+}
+
+.bannerContent {
+  position: absolute;
+  text-align: left;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  font-family: Cera Pro, sans-serif;
+  max-width: 35%;
+  width: 35%;
+  height: auto;
+  margin-left: 10vw;
+}
+.bannerTitleLight {
+  font-size: 2.5rem;
+  line-height: 3.125rem;
+  color: black;
+  font-weight: 400;
+  width: 100%;
+  height: auto;
+}
+.bannerSubtitleLight {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-top: 0.9375rem;
+  color: black;
+  font-weight: 400;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 901px) and (max-width: 1201px) {
+  .bannerTitleLight {
+    font-size: 2rem;
+    line-height: 2.6875rem;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 901px) {
+  .bannerContent {
+    max-width: 50%;
+  width: 50%;
+  }
+  .bannerTitleLight {
+    font-size: 1.25rem;
+    line-height: 1.9375rem;
+  }
+
+  .bannerSubtitleLight {
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+  }
+}
+
+@media screen and (max-width: 601px) {
+
+  }

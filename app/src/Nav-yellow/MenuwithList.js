@@ -2,7 +2,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
-
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import { styled } from '@mui/material/styles';
@@ -10,6 +11,7 @@ import ListMenuData1 from './ListMenuData1';
 import ListMenuData2 from './ListMenuData2';
 import ListMenuData3 from './ListMenuData3';
 import { Avatar } from '@mui/material';
+import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
@@ -18,18 +20,19 @@ import Typography from '@mui/material/Typography';
 
 
 export default function TemporaryDrawer() {
+  // const [state, setState] = React.useState(false);
 
-  //drawer state
-  const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
-
+  //state for list(anchor)
+  const [activeButton, setActiveButton] = React.useState(0);
+  const [state, setState] = React.useState({
+    "Acquista": false,
+    "Scopri": false,
+    "Aiuto": false
+  })
  //state variabile
   const [activeTab, setActiveTab] = React.useState(0);
 
 
-  const handleDrawerToggle = (tabIndex) => {
-    setIsDrawerOpen(!isDrawerOpen);
-    setActiveTab(tabIndex);
-  }
 
 
   //Tabs functions
@@ -38,15 +41,59 @@ export default function TemporaryDrawer() {
   }
 
 
+  const toggleDrawer = (anchor, open) => (event) => {
 
+    setState({ ...state, [anchor]: open });
+    //  setActiveButton(anchor);
+  };
 
-  const handleClick = (index) =>{
+  const handleClick = (index, anchor) =>{
+    setActiveButton(index);
     setActiveTab(index);
+    setState({...state, [anchor]: true});
   }
+
+
+  // const list = (anchor) => (
+  //   <Box sx={{ width: 650 }} role="presentation" >
+  //       <Box style={{ display: 'flex', flexDirection: 'row', paddingLeft: 110}}>
+  //         {["Acquista", "Scopri", "Aiuto"].map((text, index) => (
+  //           <Box key={text} disablePadding style={{ paddingLeft: 0}}>
+  //           <ListItemButton
+  //                     onClick={() => handleClick(index, anchor)}
+  //                     style={{ display: 'flex'}}>
+  //             <ListItemText
+  //                      primary={text}  style={{color: 'green', display: 'flex', padding: 20}}/>
+  //           </ListItemButton>
+  //           {activeButton === index && (
+  //             <div style={{position: "relative"}}>
+  //               <div style={{position: "absolute", top: "0", left: "0", width: 260, paddingLeft: 30}}>
+  //                 {(()=>{
+  //                   switch (text) {
+  //                     case "Acquista":
+  //                       return <ListMenuData1/>;
+  //                     case "Scopri" :
+  //                       return <ListMenuData2/>;
+  //                       case "Aiuto":
+  //                       return <ListMenuData3/>;
+  //                     default:
+  //                       return null;
+  //                   }
+  //                   })()}
+  //               </div>
+
+  //             </div>
+  //        )}
+  //         </Box>
+  //         ))}
+  //       </Box>
+  //   </Box>
+  // );
 
 
 
   //Tab panel component
+
   function TabPanel(props) {
     const { children, value, index, ...other } = props;
     return (
@@ -77,17 +124,16 @@ export default function TemporaryDrawer() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'row'}}>
-      {['Acquista', 'Scopri', 'Aiuto'].map((anchor, index) => (
+      {['Acquista', 'Scopri', 'Aiuto'].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button style={{color: "black", paddingLeft: 60 }}
-                   onClick={() => handleDrawerToggle(index)} >
-                    {anchor}
+                  onClick={toggleDrawer(anchor, true)}>{anchor}
           </Button>
           <Drawer
             variant="persistent"
             anchor='left'
-            open={isDrawerOpen}
-            onClose={handleDrawerToggle}
+            open={state[anchor]}
+            // onClose={toggleDrawer(anchor, false)}
           >
             <DrawerHeader style={{display: "flex", justifyContent: "space-between"}}>
               <Box >
@@ -101,8 +147,8 @@ export default function TemporaryDrawer() {
 
               <IconButton>
                  <CloseIcon
-                   onClick={handleDrawerToggle}
-                   onKeyDown={handleDrawerToggle}/>
+                   onClick={toggleDrawer(anchor, false)}
+                   onKeyDown={toggleDrawer(anchor, false)}/>
               </IconButton>
             </DrawerHeader>
 
