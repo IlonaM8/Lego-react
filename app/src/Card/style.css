@@ -1,49 +1,57 @@
-*{
-    font-family: "CeraPro-regular";
+* {
+  font-family: "CeraPro-regular";
 }
 
-.textIcon{
-    font-size: 13px;;
+.textIcon {
+  font-size: 13px;
 }
 
-.borderContent{
-  padding: 15px;
-  height: 55%;
+.borderContent {
+  padding: 20px;
+  height: 60%;
   border: 1px solid rgb(224, 224, 224);
 }
 
-.textCard{
-    font-size: 14px;;
+.textCard {
+  font-size: 14px;
 }
 
-.effectImg:hover{
-    transform: scale(1.08);
-    transition: 0.8s;
+.effectImg:hover {
+  transform: scale(1.08);
+  transition: 0.8s;
 }
 
-.effectImg{
-    cursor: pointer;
-    height: fit-content;
+.effectImg {
+  cursor: pointer;
+  height: fit-content;
+}
+
+.btn-add {
+  border: 1px solid orange;
+}
+
+.btn-add:hover {
+  color: rgb(241, 178, 69);
+  border: 0.5px solid orange;
 }
 
 /* font */
 @font-face {
-    font-family: "CeraPro-bold";
-    src: url("fontspring-demo-cerapro-bold.woff");
+  font-family: "CeraPro-bold";
+  src: url("fontspring-demo-cerapro-bold.woff");
 }
 
 @font-face {
-    font-family: "CeraPro-medium";
-    src: url("fontspring-demo-cerapro-medium.woff");
+  font-family: "CeraPro-medium";
+  src: url("fontspring-demo-cerapro-medium.woff");
 }
 
 @font-face {
-    font-family: "CeraPro-regular";
-    src: url("fontspring-demo-cerapro-regular.woff");
+  font-family: "CeraPro-regular";
+  src: url("fontspring-demo-cerapro-regular.woff");
 }
 
 @media (min-width: 500px) {
-
 }
 @media (min-width: 700px) {
 }

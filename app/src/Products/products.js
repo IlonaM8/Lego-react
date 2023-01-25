@@ -1,21 +1,12 @@
-// import * as React from 'react';
-import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import { Button } from "@mui/material";
-import { Rating } from "@mui/material";
+import { Button, CardActions } from "@mui/material";
+import { Card, CardMedia, CardContent, Typography } from "@mui/material";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import style from "./style.css";
 
-const AnotherCard = (props) => {
+const ListCard = (props) => {
   return (
     <Card style={{ border: "none", boxShadow: "none" }}>
       <div className="borderContent">
-        <IconButton aria-label="add to favorites" color="primary">
-          <FavoriteBorderOutlinedIcon />
-        </IconButton>
         <span className="textIcon">
           <b>Aggiungi alla lista dei desideri</b>
         </span>
@@ -29,7 +20,6 @@ const AnotherCard = (props) => {
         <p className="textCard">
           <b>{props.nameItem}</b>
         </p>
-        <Rating defaultValue={3.0} />
         <Typography
           variant="body2"
           color="text.primary"
@@ -38,7 +28,6 @@ const AnotherCard = (props) => {
           }}
         >
           <b>{props.price}</b>
-          {/* <span style={{textDecoration:'line-through', color:'black'}}>{props.price}</span> 174,99€ */}
         </Typography>
       </CardContent>
 
@@ -58,4 +47,4 @@ const AnotherCard = (props) => {
   );
 };
 
-export default AnotherCard;
+export default ListCard;

@@ -1,9 +1,9 @@
 import { Box } from "@mui/system";
 import { Grid } from "@mui/material";
-import styles from "./style.css";
-import AnotherCard from "./Card";
+import style from "./style.css";
+import ListCard from "./products";
 
-export const first = [
+export const List = [
   {
     nameItem: "Jazz Club",
     price: "229.99 €",
@@ -70,9 +70,7 @@ export const first = [
     image:
       "https://www.lego.com/cdn/cs/set/assets/bltb76f113cca5cced0/10314.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
   },
-];
 
-export const third = [
   {
     nameItem: "L'avamposto della spada",
     price: "44.99 €",
@@ -141,11 +139,11 @@ export const third = [
   },
 ];
 
-const BigCard = (props) => {
+const ProductsList = (props) => {
   return (
     <Box p={5}>
       <h2>{props.title}</h2>
-      <div className="changeMe">
+      <div>
         <Grid
           // display="flex"
           container
@@ -159,7 +157,7 @@ const BigCard = (props) => {
           //   scrollBehavior: "smooth",
           // }}
         >
-          {props.array.map((element, index) => {
+          {props.array.List((element, index) => {
             return (
               <Grid
                 item
@@ -172,15 +170,8 @@ const BigCard = (props) => {
                 md={5}
                 lg={3}
                 xl={3}
-                style={
-                  {
-                    // padding: '20px',
-                    //boxShadow ?
-                    // transition: 'all 0.2s',
-                  }
-                }
               >
-                <AnotherCard
+                <ListCard
                   key={index}
                   nameItem={element.nameItem}
                   price={element.price}
@@ -195,4 +186,4 @@ const BigCard = (props) => {
   );
 };
 
-export default BigCard;
+export default ProductsList;
