@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { CheckboxProduct } from './checkbox/CheckboxProduct'
 
 export default function Venduti() {
@@ -7,6 +8,7 @@ export default function Venduti() {
        La pagina dei più Venduti
 
       <CheckboxProduct />
+      {/* <CheckBox /> */}
 
     </div>
   )
