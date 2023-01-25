@@ -49,6 +49,7 @@ const AnotherCard = (props) => {
             width: "100%",
             backgroundColor: "orange",
             color: "black",
+            border: " 1px solid orange",
           }}
         >
           Aggiungi al carrello

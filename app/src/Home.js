@@ -24,8 +24,8 @@ export default function Home() {
       />
       <ImageList />
 
-      <BigCard array={first} />
-      <BaseCard array={second} />
+      <BigCard array={first} title="Consigliati per te" />
+      <BaseCard array={second} title="Tendenze attuali" />
       <BannerDark
         imgLink={
           "https://www.lego.com/cdn/cs/set/assets/bltd08f4803d627def6/Retiring-Home-202011-Hero01-Standard-Large.jpg?fit=crop&format=jpg&quality=80&width=1600&height=500&dpr=1"
@@ -36,9 +36,9 @@ export default function Home() {
         }
       />
 
-      <BigCard array={third} />
-      <BaseCard array={fourth} />
-      <BaseCard array={fifth} />
+      <BigCard array={third} title="Set in evidenza" />
+      <BaseCard array={fourth} title="Le novità" />
+      <BaseCard array={fifth} title="Leggi tutto" />
     </>
   );
 }

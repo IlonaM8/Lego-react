@@ -1,19 +1,20 @@
 import { Button, CardActions } from "@mui/material";
 import { Card, CardMedia, CardContent, Typography } from "@mui/material";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import style from "./style.css";
+import IconButton from "@mui/material/IconButton";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
 const ListCard = (props) => {
   return (
-    <Card style={{ border: "none", boxShadow: "none" }}>
-      <div className="borderContent">
-        <span className="textIcon">
-          <b>Aggiungi alla lista dei desideri</b>
-        </span>
+    <Card>
+      <IconButton aria-label="add to favorites" color="primary">
+        <FavoriteBorderOutlinedIcon />
+      </IconButton>
+      <span className="textIcon">
+        <b>Aggiungi alla lista dei desideri</b>
+      </span>
 
-        <div className="applyEffect">
-          <CardMedia className="effectImg" component="img" src={props.image} />
-        </div>
+      <div className="applyEffect">
+        <CardMedia className="effectImg" component="img" src={props.image} />
       </div>
 
       <CardContent>
@@ -31,7 +32,7 @@ const ListCard = (props) => {
         </Typography>
       </CardContent>
 
-      <CardActions style={{ justifyContent: "center" }}>
+      <CardActions>
         <Button
           className="btn-add"
           sx={{

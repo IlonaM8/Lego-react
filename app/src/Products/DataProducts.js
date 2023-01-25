@@ -1,14 +1,15 @@
 import { Box } from "@mui/system";
 import { Grid } from "@mui/material";
-import style from "./style.css";
 import ListCard from "./products";
+import BasicPagination from "./pagination";
+import { useState } from "react";
 
 export const List = [
   {
-    nameItem: "Jazz Club",
-    price: "229.99 €",
+    nameItem: "Casetta per uccelli",
+    price: "29.99 €",
     image:
-      "https://www.lego.com/cdn/cs/set/assets/blt354cdb9826736318/10312.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
+      "https://www.lego.com/cdn/cs/set/assets/blt60b8b9324fadbdfd/31143.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
   },
   {
     nameItem: "Gandalf il Grigio e Balrog™",
@@ -41,16 +42,16 @@ export const List = [
       "https://www.lego.com/cdn/cs/set/assets/blt474bb80770911c58/10313.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
   },
   {
-    nameItem: "LEGO® Minifigures - Serie 24",
-    price: "3,99 €",
+    nameItem: "Cartolina dall'Australia",
+    price: "14,99 €",
     image:
-      "https://www.lego.com/cdn/cs/set/assets/bltf2777e75d6cb7718/71037.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
+      "https://www.lego.com/cdn/cs/set/assets/blt9cdeec0032a63903/40651.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
   },
   {
-    nameItem: "TIE Bomber™",
-    price: "64,99 €",
+    nameItem: "Danzatore del leone",
+    price: "9,99 €",
     image:
-      "https://www.lego.com/cdn/cs/set/assets/bltd3b63280c2b9f8fc/75347.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
+      "https://www.lego.com/cdn/cs/set/assets/blt29d71e0f0a2b3015/40540.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
   },
   {
     nameItem: "L'albero dei soldi",
@@ -59,10 +60,10 @@ export const List = [
       "https://www.lego.com/cdn/cs/set/assets/bltd5f0302fe3c594ea/40648_alt1.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
   },
   {
-    nameItem: "Battle Pack Clone Troopers™ Legione 501",
-    price: "19,99 €",
+    nameItem: "Set scacchi LEGO™",
+    price: "64,99 €",
     image:
-      "https://www.lego.com/cdn/cs/set/assets/bltf394757329116141/75345.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
+      "https://www.lego.com/cdn/cs/set/assets/blt46a07a9b068b46c2/40174.jpg?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
   },
   {
     nameItem: "Centrotavola di fiori secchi",
@@ -84,10 +85,10 @@ export const List = [
       "https://www.lego.com/cdn/cs/set/assets/blt625e667e3b206d20/40631.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
   },
   {
-    nameItem: "Macchina del tempo Ritorno al futuro",
-    price: "199,99 €",
+    nameItem: "Il Quinjet degli Avengers",
+    price: "99,99 €",
     image:
-      "https://www.lego.com/cdn/cs/set/assets/blt55fbccadb7d66885/10300.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
+      "https://www.lego.com/cdn/cs/set/assets/blte17bd71ca0739648/76248.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
   },
   {
     nameItem: "Millennium Falcon™",
@@ -96,10 +97,10 @@ export const List = [
       "https://www.lego.com/cdn/cs/set/assets/blt95c35d4ed5665a49/75192.jpg?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
   },
   {
-    nameItem: "NASA Apollo 11 Lunar Lander",
-    price: "99,99 €",
+    nameItem: "Negozio design e fioraio",
+    price: "159,99 €",
     image:
-      "https://www.lego.com/cdn/cs/set/assets/blt5e2703640ec85d2a/10266.jpg?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
+      "https://www.lego.com/cdn/cs/set/assets/blt641f3aa0e518bae9/41732.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
   },
   {
     nameItem: "Bouquet fiori selvatici",
@@ -114,10 +115,10 @@ export const List = [
       "https://www.lego.com/cdn/cs/set/assets/blt2b016d5b4a954e0e/40638.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
   },
   {
-    nameItem: "Vincent Van Gogh-Notte stellata",
-    price: "169,99 €",
+    nameItem: "Narcisi",
+    price: "12,99 €",
     image:
-      "https://www.lego.com/cdn/cs/set/assets/bltc6d87e5e7bacb3ae/21333.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
+      "https://www.lego.com/cdn/cs/set/assets/blt5b0537aa2f0c1bce/40646.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
   },
   {
     nameItem: "L'albero dei soldi",
@@ -126,10 +127,10 @@ export const List = [
       "https://www.lego.com/cdn/cs/set/assets/bltd5f0302fe3c594ea/40648_alt1.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
   },
   {
-    nameItem: "Boutique hotel",
-    price: "229,99 €",
+    nameItem: "Gli appartamenti di Friends",
+    price: "179,99 €",
     image:
-      "https://www.lego.com/cdn/cs/set/assets/blt62f99776b13a8e94/10297.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
+      "https://www.lego.com/cdn/cs/set/assets/blt227c50ab0713ddf2/10292.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
   },
   {
     nameItem: "Centrotavola di fiori secchi",
@@ -140,49 +141,40 @@ export const List = [
 ];
 
 const ProductsList = (props) => {
+  const [List, setProducts] = useState([]);
   return (
-    <Box p={5}>
-      <h2>{props.title}</h2>
-      <div>
-        <Grid
-          // display="flex"
-          container
-          direction="row"
-          flexWrap="nowrap"
-          spacing={3}
+    <>
+      <Box p={5}>
+        <div>
+          <Grid
+            //   xs={4}
+            container
+            //   direction="row"
+            //   flexWrap="nowrap"
 
-          //   textAlign='center'
-          // style={{
-          //   overflowX: "scroll",
-          //   scrollBehavior: "smooth",
-          // }}
-        >
-          {props.array.List((element, index) => {
-            return (
-              <Grid
-                item
-                sx={{
-                  display: "flex",
-                  flex: "0 0 100%",
-                }}
-                xs={12}
-                sm={6}
-                md={5}
-                lg={3}
-                xl={3}
-              >
-                <ListCard
-                  key={index}
-                  nameItem={element.nameItem}
-                  price={element.price}
-                  image={element.image}
-                />
-              </Grid>
-            );
-          })}
-        </Grid>
-      </div>
-    </Box>
+            //   textAlign='center'
+            // style={{
+            //   overflowX: "scroll",
+            //   scrollBehavior: "smooth",
+            // }}
+          >
+            {List.map((element, index) => {
+              return (
+                <Grid item flex xs={6} sm={6} md={6} lg={4} xl={4}>
+                  <ListCard
+                    key={index}
+                    nameItem={element.nameItem}
+                    price={element.price}
+                    image={element.image}
+                  />
+                </Grid>
+              );
+            })}
+          </Grid>
+        </div>
+      </Box>
+      <BasicPagination setProducts={(p) => setProducts(p)} />
+    </>
   );
 };
 
