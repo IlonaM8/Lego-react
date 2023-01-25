@@ -1,9 +1,10 @@
 import { Box } from "@mui/system";
 import { Grid } from "@mui/material";
-import styles from "./style.css";
-import AnotherCard from "./Card";
+import ListCard from "./products";
+import BasicPagination from "./pagination";
+import { useState } from "react";
 
-export const first = [
+export const List = [
   {
     nameItem: "Casetta per uccelli",
     price: "29.99 €",
@@ -70,9 +71,7 @@ export const first = [
     image:
       "https://www.lego.com/cdn/cs/set/assets/bltb76f113cca5cced0/10314.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
   },
-];
 
-export const third = [
   {
     nameItem: "L'avamposto della spada",
     price: "44.99 €",
@@ -141,45 +140,42 @@ export const third = [
   },
 ];
 
-const BigCard = (props) => {
+const ProductsList = (props) => {
+  const [List, setProducts] = useState([]);
   return (
-    <Box p={5}>
-      <h2>{props.title}</h2>
-      <div className="changeMe">
-        <Grid
-          // display="flex"
-          container
-          direction="row"
-          flexWrap="nowrap"
-          spacing={3}
-        >
-          {props.array.map((element, index) => {
-            return (
-              <Grid
-                item
-                sx={{
-                  display: "flex",
-                  flex: "0 0 100%",
-                }}
-                xs={12}
-                sm={6}
-                md={5}
-                lg={3}
-                xl={3}
-              >
-                <AnotherCard
-                  key={index}
-                  nameItem={element.nameItem}
-                  price={element.price}
-                  image={element.image}
-                />
-              </Grid>
-            );
-          })}
-        </Grid>
-      </div>
-    </Box>
+    <>
+      <Box p={5}>
+        <div>
+          <Grid
+            //   xs={4}
+            container
+            //   direction="row"
+            //   flexWrap="nowrap"
+
+            //   textAlign='center'
+            // style={{
+            //   overflowX: "scroll",
+            //   scrollBehavior: "smooth",
+            // }}
+          >
+            {List.map((element, index) => {
+              return (
+                <Grid item flex xs={6} sm={6} md={6} lg={4} xl={4}>
+                  <ListCard
+                    key={index}
+                    nameItem={element.nameItem}
+                    price={element.price}
+                    image={element.image}
+                  />
+                </Grid>
+              );
+            })}
+          </Grid>
+        </div>
+      </Box>
+      <BasicPagination setProducts={(p) => setProducts(p)} />
+    </>
   );
 };
 
-export default BigCard;
+export default ProductsList;

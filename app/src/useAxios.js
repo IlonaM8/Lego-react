@@ -1,6 +1,6 @@
 import axios from "axios";
 
-function UseAxios(name, email, password, birt_date) {
+function UseAxios(email) {
   const header = {
     "Content-Type": "application/json",
     "Access-Control-Allow-Origin": "*",
@@ -12,10 +12,7 @@ function UseAxios(name, email, password, birt_date) {
     .post(
       URL,
       {
-        name: name,
         email: email,
-        password: password,
-        birt_date: birt_date,
       },
       {
         headers: header,
