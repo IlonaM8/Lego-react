@@ -42,8 +42,8 @@ const handleCheck = (event) => {
   };
 
   // Return classes based on whether item is checked
-    const isChecked = (item) =>
-    checked.includes(item) ? "checked-item" : "not-checked-item";
+    // const isChecked = (item) =>
+    // checked.includes(item) ? "checked-item" : "not-checked-item";
 
 
 
