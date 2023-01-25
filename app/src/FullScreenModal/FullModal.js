@@ -4,9 +4,11 @@ import CloseIcon from '@mui/icons-material/Close';
 
 
 
+
 export default function FullModal() {
 
     const [open, setOpen] = React.useState(false);
+
     const handleOpen = () => {
       setOpen(true);
     };
@@ -18,10 +20,11 @@ export default function FullModal() {
 
     return (
       <React.Fragment>
-        <button onClick={handleOpen}>Open Modal</button>
+       {<button onClick={handleOpen}>Open Modal</button>}
 
 
        <Modal
+
             open={open}
             onClose={handleClose}
             fullScreen={true}
