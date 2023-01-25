@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
 import { Box } from '@mui/system';
+import CardsInsideModal from '../Modal/CardsInsideModal';
 
 
 
@@ -114,6 +115,12 @@ const [open, setOpen] = React.useState(false);
                       <Typography variant='h4' sx={{color: "white", fontWeight: "600", display: "flex", textAlign: "right", flexWrap: "wrap",  paddingRight: 8}}>Progetta e condividi le tue creazioni con LEGO® 3D Decorator</Typography>
                       </Box>
 
+                  </Box>
+                  <Box>
+                    <CardsInsideModal
+                       image="https://www.lego.com/cdn/cs/set/assets/blt2ea6262537507fd5/Image_Disney_Bracelet_Desktop.png?width=400"
+                       text="Card text 1"
+                        />
                   </Box>
 
               </div>
