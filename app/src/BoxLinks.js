@@ -14,6 +14,7 @@ function BoxLinks() {
         paddingLeft: "0.625rem",
         marginRight: "1.25rem",
       }}
+      className="box-links"
     >
       <h4 className="footer-link-title">{link.title}</h4>
 

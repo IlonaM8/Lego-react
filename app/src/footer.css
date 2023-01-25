@@ -23,6 +23,7 @@
   background-color: #201d48;
   height: auto;
   color: white;
+  width: 100vw;
 }
 
 .logo-footer {
@@ -90,7 +91,7 @@
   margin-bottom: 1.25rem;
 }
 
-.input-footer{
+.input-footer {
   font-size: 0.875rem;
   padding: 1rem;
   height: 3.45rem;
@@ -98,7 +99,7 @@
   outline: none;
 }
 
-.button-footer{
+.button-footer {
   background-color: #e9ecef;
   border: 1px solid #ced4da;
   border-radius: 0.375rem;
@@ -113,7 +114,7 @@
   justify-content: center;
 }
 
-.arrow-footer{
+.arrow-footer {
   line-height: 0;
   height: 16px;
   width: 16px;
@@ -133,11 +134,46 @@
   margin-bottom: 1.25rem;
 }
 
-.rights-p{
+.rights-p {
   font-size: 0.75rem;
   line-height: 1.1875rem;
   color: rgb(255, 255, 255);
   margin-bottom: 1.25rem;
   margin-top: 0px;
   font-family: "CeraPro-regular";
+}
+
+.footer-accordion {
+  display: none;
+}
+
+.mobile-box-footer {
+  display: none;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .box-links {
+    display: none;
+  }
+
+  .box-login-e-social {
+    display: none;
+  }
+
+  .footer-accordion {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-box-footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .box-login{
+    width: 100%;
+  }
 }
