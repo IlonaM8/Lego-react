@@ -1,0 +1,31 @@
+.product-page{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 50px;
+
+}
+
+
+.banner-box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(237, 235, 235);
+    color: black;
+    font-size: 14px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+
+.banner-black{
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
