@@ -117,7 +117,7 @@ const [open, setOpen] = React.useState(false);
                       </Box>
 
                   </Box>
-                  <Box style={{paddingTop: 76, display: "flex", gap: 20}}>
+                  <Box style={{paddingTop: 76, display: "flex", gap: 20, overflowY: "scroll", paddingBottom: 50 }}>
                     <CardsInsideModal
                        image="https://www.lego.com/cdn/cs/set/assets/blt2ea6262537507fd5/Image_Disney_Bracelet_Desktop.png?width=400"
                        text="Multipack Bracciali Topolino e amici"
