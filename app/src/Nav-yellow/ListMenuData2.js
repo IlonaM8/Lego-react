@@ -99,6 +99,7 @@ const [open, setOpen] = React.useState(false);
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+
               }}
               >
               <div style={{ backgroundColor: '#b68dc9', padding: '20px', width: "100%", height: "100%" }}>
@@ -116,10 +117,45 @@ const [open, setOpen] = React.useState(false);
                       </Box>
 
                   </Box>
-                  <Box>
+                  <Box style={{paddingTop: 76, display: "flex", gap: 20}}>
                     <CardsInsideModal
                        image="https://www.lego.com/cdn/cs/set/assets/blt2ea6262537507fd5/Image_Disney_Bracelet_Desktop.png?width=400"
-                       text="Card text 1"
+                       text="Multipack Bracciali Topolino e amici"
+                        />
+                        <CardsInsideModal
+                       image="https://www.lego.com/cdn/cs/set/assets/blte7b8a5fb0028abea/DisneyFrame_400x480.png?width=400"
+                       text="Il Kit Back to School di Topolino e Minnie"
+                       bgColor="#01b1af"
+                        />
+
+                         <CardsInsideModal
+                       image="https://www.lego.com/cdn/cs/set/assets/bltdc6e5eb8556e38de/bananaPenHolder_v2.png?width=400"
+                       text="Portapenne banana"
+                       bgColor="#d54551"
+                        />
+
+                       <CardsInsideModal
+                       image="https://www.lego.com/cdn/cs/set/assets/bltb27c9ea9a9e9a003/croppedCreativeDesignerBox_v2.png?width=400"
+                       text="Designer Box creative"
+                       bgColor="#01a0e1"
+                        />
+
+                      <CardsInsideModal
+                       image="https://www.lego.com/cdn/cs/set/assets/blteaa709b0b9f13fd4/keyHanger_v2.png?width=400"
+                       text="Portachiavi creativo"
+                       bgColor="#a82a75"
+                        />
+
+                       <CardsInsideModal
+                       image="https://www.lego.com/cdn/cs/set/assets/blt638707535a80ed94/bagTag_v2.png?width=400"
+                       text="Dolce tentazioni - Braccialetto e bag tag"
+                       bgColor="#01b1af"
+                        />
+
+                       <CardsInsideModal
+                       image="https://www.lego.com/cdn/cs/set/assets/blt057ad63e3c1794f9/creativePartyKit_v2.png?width=400"
+                       text="Kit Party creativo"
+
                         />
                   </Box>
 
