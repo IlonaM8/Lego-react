@@ -1,10 +1,16 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import { CheckboxProduct } from "./checkbox/CheckboxProduct";
-import ProductsList from "./Products/DataProducts";
+
 import "./checkbox/productPage.css"
 
+
+
+import RenderComponent from "./Checkbox2/RenderComponent";
+
+
 export default function Venduti() {
+
+
   return (
     <Box className="product-page">
       <Typography className="banner-black" variant="h4">I più venduti</Typography>
@@ -14,8 +20,15 @@ export default function Venduti() {
       </p>
       </Box>
 
-      <CheckboxProduct />
-      <ProductsList />
+
+       <Box>
+
+         {/* <ProductsList /> */}
+
+         <RenderComponent />
+
+       </Box>
+
     </Box>
   );
 }

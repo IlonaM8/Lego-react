@@ -1,38 +1,21 @@
 import { Box, FormControlLabel, Checkbox, Typography } from '@mui/material';
 import React from "react";
+import { Data, tipiProdotto } from './Data';
 
 
 
-const tipiProdotto = [
-    {
-        "id": 1,
-        "name": "Set"
-    },
-    {
-        "id": 2,
-        "name": "Home decor"
-    },
-    {
-        "id": 3,
-        "name": "Adulti"
-    },
-    {
-        "id": 4,
-        "name": "Fiori"
-    },
-    {
-        "id": 5,
-        "name": "Regali per Pasqua"
-    }
-]
 
-export const CheckboxProduct = () => {
+export const CheckboxProduct = (props) => {
     const [statusCheck, setStatusCheck] = React.useState([false, false, false, false, false]);
 
     const handleChange = (event, index) => {
-        const newStatusCheck = [...statusCheck];
-        newStatusCheck[index] = event.target.checked;
-        setStatusCheck(newStatusCheck);
+        // const newStatusCheck = [...statusCheck];
+        // newStatusCheck[index] = event.target.checked;
+        // setStatusCheck(newStatusCheck);
+
+        const newValues = [...props.checkboxValues];
+        newValues[index] = event.target.checked;
+        props.handleFilters(newValues);
     };
 
 
