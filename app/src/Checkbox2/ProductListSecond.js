@@ -12,7 +12,7 @@ const ProductListSecond = props => {
         <Grid container  columns={{ xs: 12, sm: 8, md: 12, lg: 12}} >
             {products.map(({ id, title, category, image, price }) => (
                 <Grid item flex xs={6} sm={6} md={6} lg={4} xl={4}>
-                    <Card key={id} sx={{backgroundColor: "lightyellow", height: 460, padding: 3}}>
+                    <Card key={id} sx={{ height: 460, padding: 3}}>
                         <IconButton aria-label="add to favorites" color="primary">
                             <FavoriteBorderOutlinedIcon />
                         </IconButton>
