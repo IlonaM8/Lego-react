@@ -26,6 +26,7 @@ export default function BasicPagination({ setProducts }) {
     const to = (page - 1) * pageSize + pageSize;
 
     setPagination({ ...pagination, from: from, to: to });
+    
   };
 
   return (

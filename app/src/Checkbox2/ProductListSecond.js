@@ -1,13 +1,16 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Grid, IconButton, Typography } from "@mui/material";
 // import { Box } from "@mui/system";
-import React from "react";
+import React  from "react";
 // import ProductSecond from "./ProductSecond";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import { Box } from "@mui/system";
+import BasicPagination from "../Products/pagination";
 
 const ProductListSecond = props => {
+    // const [products, setProducts] = useState([]);
   const { products } = props;
     return (
+        <>
         <Box sx={{maxWidth: 1110 }} p={4}>
         <Grid container  columns={{ xs: 12, sm: 8, md: 12, lg: 12}} >
             {products.map(({ id, title, category, image, price }) => (
@@ -60,6 +63,8 @@ const ProductListSecond = props => {
             ))}
  </Grid>
  </Box>
+ {/* <BasicPagination setProducts={(p) => setProducts(p)} /> */}
+ </>
     );
 
 
