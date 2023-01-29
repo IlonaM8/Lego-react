@@ -201,6 +201,24 @@ const productsList = [
       image:
         "https://www.lego.com/cdn/cs/set/assets/bltb76f113cca5cced0/10314.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
     },
+    { id: 23,
+      category: "second",
+      interest: "Arte",
+      age: "18+",
+      title: "Centrotavola di fiori secchi",
+      price: "49,99 €",
+      image:
+        "https://www.lego.com/cdn/cs/set/assets/bltb76f113cca5cced0/10314.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
+    },
+    { id: 24,
+      category: "second",
+      interest: "Arte",
+      age: "18+",
+      title: "Centrotavola di fiori secchi",
+      price: "49,99 €",
+      image:
+        "https://www.lego.com/cdn/cs/set/assets/bltb76f113cca5cced0/10314.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
+    },
   ];
 
   const tipiProdotto = [

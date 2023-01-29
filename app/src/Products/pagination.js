@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import service from "./services";
 import { useEffect, useState } from "react";
 
-const pageSize = 7;
+const pageSize = 9;
 
 export default function BasicPagination({ setProducts }) {
   const [pagination, setPagination] = useState({
@@ -26,23 +26,27 @@ export default function BasicPagination({ setProducts }) {
     const to = (page - 1) * pageSize + pageSize;
 
     setPagination({ ...pagination, from: from, to: to });
-    
+
   };
 
   return (
-    <Box
+    pagination.count <= pageSize ? null : (
+      <Box
       justifyContent={"center"}
       alignItems={"center"}
       display={"flex"}
       sx={{
-        margin: "20px 0px",
+        margin: "20px 0px"
       }}
     >
-      <Pagination
-        count={Math.ceil(pagination.count / pageSize)}
-        color="secondary"
-        onChange={handlePageChange}
-      />
+        <Pagination
+          count={Math.ceil(pagination.count / pageSize)}
+          color="secondary"
+          onChange={handlePageChange}
+        />
+
     </Box>
+    )
+
   );
 }

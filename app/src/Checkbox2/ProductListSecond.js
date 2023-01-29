@@ -1,18 +1,25 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Grid, IconButton, Typography } from "@mui/material";
-import React  from "react";
+import React, { useEffect, useState }  from "react";
 
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import { Box } from "@mui/system";
+import  BasicPagination  from '../Products/pagination';
 
 
-const ProductListSecond = props => {
+const ProductListSecond = ({products}) => {
+    const [displayedProducts, setDisplayedProducts] = useState([]);
 
-  const { products } = props;
+  //for pagination
+    useEffect(() => {
+        setDisplayedProducts(products);
+      }, [products]);
+
+//   const { products } = props;
     return (
         <>
         <Box sx={{maxWidth: 1110 }} p={4}>
         <Grid container  columns={{ xs: 12, sm: 8, md: 12, lg: 12}} >
-            {products.map(({ id, title, category, image, price }) => (
+            {displayedProducts.map(({ id, title, category, image, price }) => (
                 <Grid item flex xs={6} sm={6} md={6} lg={4} xl={4}>
                     <Card key={id} sx={{ height: 460, padding: 3}}>
                         <IconButton aria-label="add to favorites" color="primary">
@@ -62,6 +69,7 @@ const ProductListSecond = props => {
             ))}
  </Grid>
  </Box>
+ <BasicPagination setProducts={setDisplayedProducts} />
 
  </>
     );
