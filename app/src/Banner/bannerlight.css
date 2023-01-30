@@ -64,19 +64,52 @@
 @media screen and (min-width: 601px) and (max-width: 901px) {
   .bannerContent {
     max-width: 50%;
-  width: 50%;
+    width: 50%;
   }
   .bannerTitleLight {
-    font-size: 1.25rem;
-    line-height: 1.9375rem;
+    font-size: 1rem;
+    line-height: 1rem;
+   
   }
 
   .bannerSubtitleLight {
     font-size: 0.875rem;
     line-height: 1.1875rem;
+
   }
 }
 
 @media screen and (max-width: 601px) {
+  .bannerContent {
+    display: none;
+  }
+  .bannerTitleLight {
+    font-size: 0.8rem;
+    line-height: 0rem;
+    color: rgb(21, 21, 21);
+  }
+
+  .bannerSubtitleLight {
+    font-size: 0.675rem;
+    line-height: 1.1875rem;
+    color: rgb(12, 12, 12);
+  }
 
   }
+
+
+  @media screen and (max-width: 401px) {
+    .bannerContent {
+     display: none;
+
+    }
+    .bannerTitleLight {
+      display: none;
+    }
+
+    .bannerSubtitleLight {
+      display: none;
+    }
+
+
+    }

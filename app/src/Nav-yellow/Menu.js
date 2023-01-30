@@ -13,6 +13,7 @@ import { Avatar } from '@mui/material';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 
 
 
@@ -91,12 +92,16 @@ export default function TemporaryDrawer() {
           >
             <DrawerHeader style={{display: "flex", justifyContent: "space-between"}}>
               <Box >
+                <Link to="/">
+
+
                  <Avatar
                  style={{position: "fixed", top: 80, left: 30 }}
                 sx={{width:55, height:55}}
                 variant="square"
                 src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/500px-LEGO_logo.svg.png'
             />
+            </Link>
               </Box>
 
               <IconButton>
@@ -115,7 +120,7 @@ export default function TemporaryDrawer() {
             </Tabs>
 
             <TabPanel style={{paddingLeft: 130 }} value={activeTab} index={0}>
-                  <ListMenuData1/>
+                  <ListMenuData1 handleDrawerToggle={handleDrawerToggle}/>
             </TabPanel>
             <TabPanel style={{paddingLeft: 130, paddingRight: 20}} value={activeTab} index={1}>
                    <ListMenuData2/>

@@ -4,21 +4,6 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "CeraPro-bold";
-  src: url("fontspring-demo-cerapro-bold.woff");
-}
-
-@font-face {
-  font-family: "CeraPro-medium";
-  src: url("fontspring-demo-cerapro-medium.woff");
-}
-
-@font-face {
-  font-family: "CeraPro-regular";
-  src: url("fontspring-demo-cerapro-regular.woff");
-}
-
 .container-footer {
   background-color: #201d48;
   height: auto;
