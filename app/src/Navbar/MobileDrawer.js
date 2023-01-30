@@ -8,7 +8,8 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import CloseIcon from '@mui/icons-material/Close';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-const drawerWidth = 375;
+const drawerWidth = 330;
+
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -65,7 +66,7 @@ const  MobileDrawer = () => {
       variant="temporary"
       anchor="left"
       open={open}
-      onClose={ handleDrawerClose}>
+      onClose={handleDrawerClose}>
 
 
     <DrawerHeader>

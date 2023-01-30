@@ -1,11 +1,12 @@
-import { List } from "./DataProducts";
+// import { List } from "./DataProducts";
+import {productsList} from "../Checkbox2/data"
 
 const service = {
   getData: ({ from, to }) => {
     return new Promise((resolve, reject) => {
-      const data = List.slice(from, to);
+      const data = productsList.slice(from, to);
       resolve({
-        count: List.length,
+        count: productsList.length,
         data: data,
       });
     });

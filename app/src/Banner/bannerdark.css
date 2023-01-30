@@ -24,7 +24,7 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
-  font-family: Cera Pro, sans-serif;
+  font-family: Roboto, sans-serif;
   max-width: 35%;
   width: 35%;
   height: auto;
@@ -58,15 +58,60 @@
 @media screen and (min-width: 601px) and (max-width: 901px) {
   .bannerContent {
     max-width: 50%;
-  width: 50%;
+    width: 50%;
   }
   .bannerTitle {
-    font-size: 1.25rem;
-    line-height: 1.9375rem;
+    font-size: 1rem;
+    line-height: 1rem;
   }
   .bannerSubtitle {
-    font-size: 0.875rem;
+    font-size: 0.775rem;
     line-height: 1.1875rem;
 }
 }
 
+
+@media screen and (max-width: 601px) {
+
+  .bannerTitle  {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    color: rgb(250, 248, 248);
+  }
+
+  .bannerSubtitle {
+    font-size: 0.6rem;
+    line-height: 1rem;
+    color: rgb(250, 248, 248);
+  }
+
+  }
+
+  @media screen and (max-width: 530px) {
+    .bannerTitle {
+      font-size: 0.5rem;
+      line-height: 0.7rem;
+      color: rgb(253, 251, 251);
+    }
+    .bannerSubtitle {
+      font-size: 0.5rem;
+      line-height: 0.8rem;
+      color: rgb(250, 248, 248);
+    }
+
+
+
+    }
+
+
+  @media screen and (max-width: 440px) {
+    .bannerTitle {
+      font-size: 0.8rem;
+      line-height: 0.7rem;
+      color: rgb(253, 251, 251);
+    }
+    .bannerSubtitle {
+      display: none;
+    }
+
+    }
