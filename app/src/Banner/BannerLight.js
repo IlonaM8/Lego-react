@@ -1,6 +1,9 @@
 
-import BannerButtonLight from "./Button/BannerButtonLight.js";
+
 import "./bannerlight.css"
+
+import BannerButtonDark from "./Button/BannerButtonDark";
+import "./bannerdark.css"
 
 const BannerLight = ({ imgLink, title, subtitle, bannerLogoLink }) => {
   return (
@@ -14,9 +17,9 @@ const BannerLight = ({ imgLink, title, subtitle, bannerLogoLink }) => {
         <h1 className="bannerTitleLight"  >{title}</h1>
         <h3 className="bannerSubtitleLight" >{subtitle}</h3>
 
-        <BannerButtonLight />
+        <BannerButtonDark />
       </div>
-      
+
       <div className="bannerLogoLink">
         <img src={bannerLogoLink}
           alt=""></img>
