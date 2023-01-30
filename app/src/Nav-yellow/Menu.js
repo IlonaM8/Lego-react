@@ -80,7 +80,7 @@ export default function TemporaryDrawer() {
     <div style={{ display: 'flex', flexDirection: 'row'}}>
       {['Acquista', 'Scopri', 'Aiuto'].map((anchor, index) => (
         <React.Fragment key={anchor}>
-          <Button style={{color: "black", paddingLeft: 60 }}
+          <Button style={{color: "black", marginLeft: 40, display: "flex",  alignItems: "center" }}
                    onClick={() => handleDrawerToggle(index)} >
                     {anchor}
           </Button>
