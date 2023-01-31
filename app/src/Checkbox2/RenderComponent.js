@@ -91,8 +91,6 @@ const RenderComponent = () => {
                             filteredProducts.length === 0 ? productsList : filteredProducts
                             }
                      />
-
-
             </Box>
 
 

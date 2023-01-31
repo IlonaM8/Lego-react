@@ -34,10 +34,6 @@ export default function ListMenuData1() {
   const [activeButton, setActiveButton] = React.useState(0);
   const [listVisibile, setListVisble] = React.useState(false);
 
-  // const handleButtonClick = () =>{
-  //   setListVisble(!listVisibile);
-  // }
-
 
       const listItems = data.map((element, index) => {
         return (
@@ -69,7 +65,7 @@ export default function ListMenuData1() {
                       } else {
                         setActiveButton(index);
                         setListVisble(true)
-                        // handleButtonClick()
+                       
                       }
                     }}
 
@@ -107,8 +103,6 @@ export default function ListMenuData1() {
       {listVisibile && activeButton === 4 && <ListForButton5 />}
       {listVisibile && activeButton === 5 && <ListForButton6 />}
       </div>
-
-
 
     </div>
   )

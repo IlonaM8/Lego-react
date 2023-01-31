@@ -16,8 +16,6 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 
 
-
-
 export default function TemporaryDrawer() {
 
   //drawer state
@@ -38,14 +36,9 @@ export default function TemporaryDrawer() {
     setActiveTab(newValue);
   }
 
-
-
-
   const handleClick = (index) =>{
     setActiveTab(index);
   }
-
-
 
   //Tab panel component
   function TabPanel(props) {
@@ -93,8 +86,6 @@ export default function TemporaryDrawer() {
             <DrawerHeader style={{display: "flex", justifyContent: "space-between"}}>
               <Box >
                 <Link to="/">
-
-
                  <Avatar
                  style={{position: "fixed", top: 80, left: 30 }}
                 sx={{width:55, height:55}}
@@ -103,16 +94,12 @@ export default function TemporaryDrawer() {
             />
             </Link>
               </Box>
-
               <IconButton>
                  <CloseIcon
                    onClick={handleDrawerToggle}
                    onKeyDown={handleDrawerToggle}/>
               </IconButton>
             </DrawerHeader>
-
-            {/* {list(anchor)} */}
-
             <Tabs style={{paddingLeft: 130, paddingRight: 230}} value={activeTab} onChange={handleTabChange}>
               <Tab label="Acquista" onClick={() => handleClick(0, "Acquista")}  />
               <Tab label="Scopri" onClick={() => handleClick(1, "Scopri")} />

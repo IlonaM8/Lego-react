@@ -50,7 +50,7 @@ const ProductListSecond = ({products}) => {
                             >
                             <b>{price}</b>
                     </Typography>
-                    <p>{category}</p>
+                    {/* <p>{category}</p> */}
                     </CardContent>
                     <CardActions>
                         <Button
