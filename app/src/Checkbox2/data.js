@@ -139,7 +139,7 @@ const productsList = [
         "https://www.lego.com/cdn/cs/set/assets/blt95c35d4ed5665a49/75192.jpg?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
     },
     { id: 16,
-      category: "third",
+      category: "fourth",
       interest: "Arte",
       age: "18+",
       title: "Negozio design e fioraio",
@@ -219,6 +219,24 @@ const productsList = [
       image:
         "https://www.lego.com/cdn/cs/set/assets/bltb76f113cca5cced0/10314.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1.5",
     },
+    { id: 25,
+      category: "fourth",
+      interest: "Arte",
+      age: "18+",
+      title: "Display con coniglietti pasquali",
+      price: "29,99 €",
+      image:
+        "https://www.lego.com/cdn/cs/set/assets/blta41ee78e90b64b0b/40523.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1",
+    },
+    { id: 26,
+      category: "fifth",
+      interest: "Arte",
+      age: "18+",
+      title: "Vincent van Gogh - Notte stellata",
+      price: "29,99 €",
+      image:
+        "https://www.lego.com/cdn/cs/set/assets/bltc6d87e5e7bacb3ae/21333.png?fit=bounds&format=webply&quality=80&width=320&height=320&dpr=1",
+    }
   ];
 
   const tipiProdotto = [

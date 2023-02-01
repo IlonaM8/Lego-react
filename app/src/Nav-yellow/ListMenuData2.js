@@ -25,14 +25,6 @@ export default function ListMenuData2() {
   //the initial valjue is an array of the same lenght as data array
 const [hoverStates, setHoverStates] = useState(new Array(data.length).fill(false));
 
-//state variabile for openModal
-// const [modalOpen, setModalOpen] = useState(false);
-
-// function openModal() {
-//   setModalOpen(true);
-// }
-
-
 const [open, setOpen] = React.useState(false);
 
     const handleOpen = () => {

@@ -18,7 +18,7 @@ const ProductListSecond = ({products}) => {
     return (
         <>
         <Box sx={{maxWidth: 1110 }} p={4}>
-        <Grid container  columns={{ xs: 12, sm: 8, md: 12, lg: 12}} >
+        <Grid container  columns={{ xs: 6, sm: 8, md: 12, lg: 12}} >
             {displayedProducts.map(({ id, title, category, image, price }) => (
                 <Grid item flex xs={6} sm={6} md={6} lg={4} xl={4}>
                     <Card key={id} sx={{ height: 460, padding: 3}}>
@@ -50,7 +50,7 @@ const ProductListSecond = ({products}) => {
                             >
                             <b>{price}</b>
                     </Typography>
-                    <p>{category}</p>
+                    {/* <p>{category}</p> */}
                     </CardContent>
                     <CardActions>
                         <Button

@@ -13,9 +13,6 @@ const RenderComponent = () => {
     third: false,
     fourth: false,
     fifth: false,
-    one: false,
-    two: false,
-    three:false
   });
 
 
@@ -91,8 +88,6 @@ const RenderComponent = () => {
                             filteredProducts.length === 0 ? productsList : filteredProducts
                             }
                      />
-
-
             </Box>
 
 
