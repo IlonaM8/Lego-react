@@ -8,6 +8,7 @@ import  BasicPagination  from '../Products/pagination';
 
 const ProductListSecond = ({products}) => {
     const [displayedProducts, setDisplayedProducts] = useState([]);
+    const [hidePagination, setHidePagination] = useState(false);
 
   //for pagination
     useEffect(() => {
@@ -17,7 +18,7 @@ const ProductListSecond = ({products}) => {
 //   const { products } = props;
     return (
         <>
-        <Box sx={{maxWidth: 1110 }} p={4}>
+        <Box sx={{maxWidth: 1110 }} p={4} onClick={() => setHidePagination(!hidePagination)}>
         <Grid container  columns={{ xs: 6, sm: 8, md: 12, lg: 12}} >
             {displayedProducts.map(({ id, title, category, image, price }) => (
                 <Grid item flex xs={6} sm={6} md={6} lg={4} xl={4}>
@@ -69,7 +70,7 @@ const ProductListSecond = ({products}) => {
             ))}
  </Grid>
  </Box>
- <BasicPagination setProducts={setDisplayedProducts} />
+ {!hidePagination && <BasicPagination setProducts={setDisplayedProducts} />}
 
  </>
     );

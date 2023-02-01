@@ -50,6 +50,7 @@ const RenderComponent = () => {
                 name="first"
                 checked={categories.first}
                 handleChange={handleChange}
+                
             />
             <CheckboxSecond
                 id="2"
