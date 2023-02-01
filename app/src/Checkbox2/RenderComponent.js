@@ -13,9 +13,6 @@ const RenderComponent = () => {
     third: false,
     fourth: false,
     fifth: false,
-    one: false,
-    two: false,
-    three:false
   });
 
 
